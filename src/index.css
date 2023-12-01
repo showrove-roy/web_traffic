@@ -8,4 +8,7 @@
   .maxW1280 {
     @apply max-w-7xl mx-auto w-full md:py-3 py-1 px-2 md:px-5 !important;
   }
+  .heroBG {
+    background: url('./assets/pattern.png');
+  }
 }
