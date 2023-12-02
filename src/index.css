@@ -8,10 +8,13 @@
   .maxW1280 {
     @apply max-w-7xl mx-auto w-full md:py-3 py-1 px-2 md:px-5 !important;
   }
-  .heroBG {
-    background: url('./assets/pattern.png');
+  .maxW1600 {
+    @apply max-w-[100rem] mx-auto w-full md:py-3 py-1 px-2 md:px-5;
   }
-  .btnShadow{
-    box-shadow: 0px 4px 50px 0px rgba(51, 145, 255, 0.50);
+  .heroBG {
+    background: url("./assets/pattern.png") no-repeat center center / cover;
+  }
+  .btnShadow {
+    box-shadow: 0px 4px 50px 0px rgba(51, 145, 255, 0.5);
   }
 }
