@@ -1,9 +1,10 @@
-import { HeroSection } from "./Herosection";
+import { HeroSlider } from "./HeroSlider";
+
 
 export const Home = () => {
   return (
     <>
-      <HeroSection />
+      <HeroSlider/>
       <section className='bg-[#F9FCFD]'></section>
     </>
   );

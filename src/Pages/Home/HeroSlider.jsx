@@ -10,7 +10,7 @@ import { Autoplay, Pagination } from "swiper/modules";
 import Laptop from "../../assets/Laptop.svg";
 import { Link } from "react-router-dom";
 
-export const HeroSection = () => {
+export const HeroSlider = () => {
   return (
     <section className=' heroBG'>
       <Swiper
