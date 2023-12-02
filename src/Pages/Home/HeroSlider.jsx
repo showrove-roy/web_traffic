@@ -12,7 +12,7 @@ import { Link } from "react-router-dom";
 
 export const HeroSlider = () => {
   return (
-    <section className=' heroBG'>
+    <section className='heroBG maxW1600'>
       <Swiper
         pagination={true}
         autoplay={{

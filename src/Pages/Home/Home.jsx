@@ -1,5 +1,6 @@
 import { Documentary } from "./Documentary";
 import { HeroSlider } from "./HeroSlider";
+import { ServiceSection } from "./ServiceSection";
 
 export const Home = () => {
   return (
@@ -9,6 +10,9 @@ export const Home = () => {
       <section className='bg-[#F9FCFD] maxW1600 py-10'>
         {/* Documentary section */}
         <Documentary />
+
+        {/* service section */}
+        <ServiceSection />
       </section>
     </>
   );
