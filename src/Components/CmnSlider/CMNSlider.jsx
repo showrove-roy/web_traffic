@@ -8,48 +8,25 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination } from "swiper/modules";
 
 import Laptop from "../../assets/Laptop.svg";
-import modile from "../../assets/Mobile.svg";
-import destop from "../../assets/Group 2571.svg";
 import { Link } from "react-router-dom";
-import Video from "../../assets/video1.mp4"
-import Video2 from "../../assets/video.mp4"
-
-
-export const HeroSlider = () => {
+export const CMNSlider = () => {
   return (
     <section className='heroBG maxW1600'>
       <Swiper
         pagination={true}
         autoplay={{
-          delay: 500000,
+          delay: 5000,
           disableOnInteraction: false,
         }}
         modules={[Pagination, Autoplay]}
         className='mySwiper'>
         {/* Slider 1 */}
-
         <SwiperSlide>
           <div className='hero-content flex-col lg:flex-row-reverse md:py-20 py-10 gap-5'>
             {/* slider right & res-top */}
-            <div className='lg:w-1/2 w-full  	'>
-              <div className="  relative w-[100%] max-w-[1200px]">
-                <img src={`${Laptop}`} className=' w-[100%]' />
-
-
-                <video className='  absolute  w-[68.7%] h-[85.3%] top-[13.1%] left-[13.5%] '
-                  src={Video}
-                  muted
-                  autoPlay
-                  loop
-
-                  alt="All the devices"
-
-                >
-                </video>
-              </div>
+            <div className='lg:w-1/2 w-full'>
+              <img src={`${Laptop}`} className='lg:max-w-xl w-full' />
             </div>
-
-
             {/* slider left & res-bottom */}
             <div className='lg:w-1/2 w-full '>
               <h1 className='md:text-5xl text-2xl font-bold text-black-10 lg:text-left text-center'>
@@ -77,28 +54,13 @@ export const HeroSlider = () => {
             </div>
           </div>
         </SwiperSlide>
+        {/* Slider 2 */}
         <SwiperSlide>
           <div className='hero-content flex-col lg:flex-row-reverse md:py-20 py-10 gap-5'>
             {/* slider right & res-top */}
-            <div className='lg:w-1/2 w-full  	'>
-              <div className="  relative w-[100%] max-w-[1200px]">
-                <img src={`${destop}`} className=' w-[100%]' />
-
-
-                <video className='  absolute  w-[76.7%] h-[91.3%] top-[-1.9%] left-[11.5%] '
-                  src={Video}
-                  muted
-                  autoPlay
-                  loop
-
-                  alt="All the devices"
-
-                >
-                </video>
-              </div>
+            <div className='lg:w-1/2 w-full'>
+              <img src={`${Laptop}`} className='lg:max-w-xl w-full' />
             </div>
-
-
             {/* slider left & res-bottom */}
             <div className='lg:w-1/2 w-full '>
               <h1 className='md:text-5xl text-2xl font-bold text-black-10 lg:text-left text-center'>
@@ -126,28 +88,13 @@ export const HeroSlider = () => {
             </div>
           </div>
         </SwiperSlide>
+        {/* Slider  3*/}
         <SwiperSlide>
-          <div className='hero-content flex-col lg:flex-row-reverse md:py-20 py-10 gap-10'>
+          <div className='hero-content flex-col lg:flex-row-reverse md:py-20 py-10 gap-5'>
             {/* slider right & res-top */}
-            <div className='lg:w-1/2 w-full  	'>
-              <div className="  relative w-[100%] max-w-[1200px]">
-                <img src={`${modile}`} className=' w-[200px]' />
-
-
-                <video className='  absolute  w-[68.7%] h-[88.3%] top-[6.1%] left-[-17.5%] '
-                  src={Video2}
-                  muted
-                  autoPlay
-                  loop
-
-                  alt="All the devices"
-
-                >
-                </video>
-              </div>
+            <div className='lg:w-1/2 w-full'>
+              <img src={`${Laptop}`} className='lg:max-w-xl w-full' />
             </div>
-
-
             {/* slider left & res-bottom */}
             <div className='lg:w-1/2 w-full '>
               <h1 className='md:text-5xl text-2xl font-bold text-black-10 lg:text-left text-center'>
@@ -175,7 +122,6 @@ export const HeroSlider = () => {
             </div>
           </div>
         </SwiperSlide>
-
       </Swiper>
     </section>
   );

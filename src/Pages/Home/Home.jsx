@@ -1,4 +1,6 @@
+import { BlogSection } from "./BlogSection";
 import { Documentary } from "./Documentary";
+import { FormulaSection } from "./FormulaSection";
 import { HeroSlider } from "./HeroSlider";
 import { ServiceSection } from "./ServiceSection";
 
@@ -13,6 +15,12 @@ export const Home = () => {
 
         {/* service section */}
         <ServiceSection />
+
+        {/* FormulaSection */}
+        <FormulaSection />
+
+        {/* Blog section */}
+        <BlogSection />
       </section>
     </>
   );
