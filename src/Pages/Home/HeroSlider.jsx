@@ -48,7 +48,7 @@ export const HeroSlider = () => {
                 {/* slider btn 2 */}
                 <Link
                   to=''
-                  className='py-4 px-10 text-blue border border-blue rounded-full hover:btnShadow w-fit text-sm'>
+                  className='py-4 px-10 text-blue border-2 font-medium border-blue rounded-full hover:btnShadow w-fit text-sm'>
                   Contact Us
                 </Link>
               </div>
@@ -82,7 +82,7 @@ export const HeroSlider = () => {
                 {/* slider btn 2 */}
                 <Link
                   to=''
-                  className='py-4 px-10 text-blue border border-blue rounded-full hover:btnShadow w-fit text-sm'>
+                  className='py-4 px-10 text-blue border-2 font-medium border-blue rounded-full hover:btnShadow w-fit text-sm'>
                   Contact Us
                 </Link>
               </div>
@@ -116,7 +116,7 @@ export const HeroSlider = () => {
                 {/* slider btn 2 */}
                 <Link
                   to=''
-                  className='py-4 px-10 text-blue border border-blue rounded-full hover:btnShadow w-fit text-sm'>
+                  className='py-4 px-10 text-blue border-2 font-medium border-blue rounded-full hover:btnShadow w-fit text-sm'>
                   Contact Us
                 </Link>
               </div>
