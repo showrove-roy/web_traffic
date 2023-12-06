@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import Rectangle from "../../assets/Rectangle 1343.png";
+import Rectangle from "../../assets/BolgsImages/Rectangle 1343.png";
 export const BlogCard = () => {
   return (
-    <div className='card card-compact w-96  bg-[#EFF2F3] rounded-[40px]'>
+    <div className='card card-compact max-w-sm bg-[#EFF2F3] rounded-[40px] mx-auto'>
       <figure>
         <img src={Rectangle} alt='Shoes' />
       </figure>
