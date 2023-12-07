@@ -1,3 +1,4 @@
+import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
 import { BlogSection } from "./BlogSection";
 import { Documentary } from "./Documentary";
 import { FormulaSection } from "./FormulaSection";
@@ -22,6 +23,8 @@ export const Home = () => {
         {/* Blog section */}
         <BlogSection />
       </section>
+      {/* Brand section */}
+      <BuildBrand />
     </>
   );
 };

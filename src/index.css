@@ -21,19 +21,12 @@
       rgba(0, 0, 0, 0) 100%
     );
   }
-}
-/* //   .w-\[68\.7\%\] {
-  //     width: 69.7%;
-  // }
 
-  // <style>
-  // .h-\[85\.3\%\] {
-  //     height: 92.3%;
-  // }
-  // <style>
-  // .top-\[13\.1\%\] {
-  //     top: 6.1%;
-  // }
-  // <style>
-  // .left-\[13\.5\%\] {
-  //     left: -9.5%; */
+  .brandSectionBG {
+    background: url("./assets/img-pattern.svg"), no-repeat center center/cover;
+  }
+  .brandSectionBG2 {
+    background: url("./assets/pattern.png"),
+      #3391ff no-repeat center /cover;
+  }
+}
