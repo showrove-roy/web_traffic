@@ -1,6 +1,7 @@
 import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
 import { BlogSection } from "./BlogSection";
 import { Documentary } from "./Documentary";
+import { FaqSection } from "./FaqSection";
 import { FormulaSection } from "./FormulaSection";
 import { HeroSlider } from "./HeroSlider";
 import { ServiceSection } from "./ServiceSection";
@@ -25,6 +26,9 @@ export const Home = () => {
       </section>
       {/* Brand section */}
       <BuildBrand />
+
+      {/* FAQ Section */}
+      <FaqSection />
     </>
   );
 };
