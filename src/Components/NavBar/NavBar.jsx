@@ -12,7 +12,7 @@ export const NavBar = () => {
         </Link>
       </li>
       <li className='px-4'>
-        <Link to='/' className='text-black-10 font-semibold'>
+        <Link to='/about' className='text-black-10 font-semibold'>
           About
         </Link>
       </li>
