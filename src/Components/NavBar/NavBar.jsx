@@ -12,7 +12,7 @@ export const NavBar = () => {
         </Link>
       </li>
       <li className='px-4'>
-        <Link to='/' className='text-black-10 font-semibold'>
+        <Link to='/about' className='text-black-10 font-semibold'>
           About
         </Link>
       </li>
@@ -34,7 +34,7 @@ export const NavBar = () => {
     </>
   );
   return (
-    <nav className='bg-white bg-opacity-30 flex items-center'>
+    <nav className='bg-[rgba(0,0,0,0.04)] bg-opacity-30 flex items-center'>
       <div className='maxW1600'>
         <div className='flex justify-between items-center'>
           <div className=''>

@@ -28,6 +28,10 @@
   .brandSectionBG2 {
     background: url("./assets/pattern.png"), #3391ff no-repeat center / cover;
   }
+  .aboutShadow{
+    box-shadow: 0px 4px 50px 0px rgba(255, 255, 255, 0.25);
+  }
+
   .faqBG {
     border-radius: 6.896px;
     background: rgba(0, 0, 0, 0.06);

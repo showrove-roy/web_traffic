@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
+import { Link } from "react-router-dom";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
@@ -10,7 +11,6 @@ import { Autoplay, Pagination } from "swiper/modules";
 import Laptop from "../../assets/Laptop.svg";
 import modile from "../../assets/Mobile.svg";
 import destop from "../../assets/Group 2571.svg";
-import { Link } from "react-router-dom";
 import Video from "../../assets/video1.mp4";
 import Video2 from "../../assets/video.mp4";
 
