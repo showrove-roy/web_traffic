@@ -1,4 +1,5 @@
 import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
+import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
 import { BlogSection } from "./BlogSection";
 import { Documentary } from "./Documentary";
 import { FaqSection } from "./FaqSection";
@@ -24,11 +25,17 @@ export const Home = () => {
         {/* Blog section */}
         <BlogSection />
       </section>
+
       {/* Brand section */}
       <BuildBrand />
 
       {/* FAQ Section */}
       <FaqSection />
+
+      {/* Get In Touch */}
+      <section className='bg-[#F9FCFD] '>
+        <GetInTouch />
+      </section>
     </>
   );
 };

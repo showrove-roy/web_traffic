@@ -32,4 +32,9 @@
     border-radius: 6.896px;
     background: rgba(0, 0, 0, 0.06);
   }
+
+  .getInTouchBg {
+    border-radius: 25px;
+    background: rgba(0, 0, 0, 0.04);
+  }
 }
