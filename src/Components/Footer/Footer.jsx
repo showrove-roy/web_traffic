@@ -11,7 +11,7 @@ import { IoMdMail } from "react-icons/io";
 export const Footer = () => {
   return (
     <>
-      <footer className='bg-blue pt-10 pb-8 h-full'>
+      <footer className='footerBG pt-10 pb-8 h-full'>
         <div className='maxW1600'>
           <div className=''>
             <div className=''>
