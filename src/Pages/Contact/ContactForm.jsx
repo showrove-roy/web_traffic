@@ -1,6 +1,6 @@
 export const ContactForm = () => {
   return (
-    <div className='bg-[rgba(0,0,0,0.04)] md:max-w-5xl max-w-md lg:py-12 py-6 lg:px-28 sm:px-10 px-4 mx-auto rounded-3xl mt-12'>
+    <div className='bg-[#f5f5f5] md:max-w-5xl max-w-md lg:py-12 py-6 lg:px-28 sm:px-10 px-4 mx-auto rounded-3xl mt-12'>
       <div className='grid md:grid-cols-2 grid-cols-1 gap-6'>
         {/* First Name */}
         <label className='form-control w-full'>
