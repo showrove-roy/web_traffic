@@ -19,7 +19,7 @@ export const BlogSection = () => {
       title: "JCI Dhaka Founders Elects Nahid Hasan as 2024 ...",
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      cardImage: `${image1}`,
+      image: `${image1}`,
       blogLink: "#",
     },
     {
@@ -27,7 +27,7 @@ export const BlogSection = () => {
       title: "Beware of scammers offering jobs on behalf of us",
       subTitle:
         "Two years ago, a scammer falsely claiming to be Dusyanthan Balasubramanian, a Bizcope employee, sent countless threatening emails ...",
-      cardImage: `${image2}`,
+      image: `${image2}`,
       blogLink: "#",
     },
     {
@@ -35,7 +35,7 @@ export const BlogSection = () => {
       title: "How To Become a Creative Director (or Art Director) in ...",
       subTitle:
         "A creative/art director is one of the most influential executive positions you can achieve in a company.",
-      cardImage: `${image1}`,
+      image: `${image1}`,
       blogLink: "#",
     },
     {
@@ -43,7 +43,7 @@ export const BlogSection = () => {
       title: "What a Creative Director (or Art Director) in ...",
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      cardImage: `${image4}`,
+      image: `${image4}`,
       blogLink: "#",
     },
   ];

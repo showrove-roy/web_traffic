@@ -5,7 +5,7 @@ export const BlogCard = ({blog}) => {
   return (
     <div className='card card-compact max-w-sm bg-[#EFF2F3] rounded-[40px] mx-auto'>
       <figure>
-        <img src={`${blog?.cardImage}`} alt='Shoes' />
+        <img src={`${blog?.image}`} alt='Shoes' />
       </figure>
       <div className='card-body'>
         <h2 className='card-title md:text-2xl text-base'>
