@@ -17,17 +17,17 @@ export const NavBar = () => {
         </Link>
       </li>
       <li className='px-4'>
-        <Link to='/' className='text-black-10 font-semibold'>
+        <Link to='/service' className='text-black-10 font-semibold'>
           Services
         </Link>
       </li>
       <li className='px-4'>
-        <Link to='/' className='text-black-10 font-semibold'>
+        <Link to='/blog' className='text-black-10 font-semibold'>
           Blog
         </Link>
       </li>
       <li className='bg-blue py-[15px] px-[50px] rounded-full cursor-pointer btnShadow'>
-        <Link to='/' className='text-white font-semibold'>
+        <Link to='/contact' className='text-white font-semibold'>
           Contacts
         </Link>
       </li>

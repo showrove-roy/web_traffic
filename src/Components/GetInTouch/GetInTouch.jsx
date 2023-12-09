@@ -14,12 +14,12 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export const GetInTouch = () => {
   return (
-    <section className='maxW1600 py-10'>
-      <h2 className='text-5xl font-semibold text-black-10 text-center mt-10 lg:mt-24 mb-16'>
+    <section className='maxW1600 py-10 md:mb-20 mb-10'>
+      <h2 className='text-5xl font-semibold text-black-10 text-center mt-10 lg:mt-20'>
         Get In <span className='text-blue'>Touch </span>
       </h2>
       <div className=''>
-        <div className='md:mt-20 mt-10'>
+        <div className='md:mt-16 mt-8'>
           <div className='flex flex-col md:flex-row-reverse justify-between gap-5 items-center'>
             <div className='md:w-1/2 w-full flex justify-center '>
               <img src={`${getintouch}`} alt='' className='max-w-md w-full' />

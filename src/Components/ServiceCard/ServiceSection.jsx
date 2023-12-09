@@ -94,17 +94,12 @@ export const ServiceSection = () => {
     },
   ];
   return (
-    <section>
-      <h2 className='text-6xl font-semibold text-black-10 text-center mt-24 mb-16'>
-        Our <span className='text-blue'>Services</span>
-      </h2>
-      <div className='w-full'>
-        <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-y-10 gap-5 justify-items-center w-full'>
-          {servicesData.map((serviceData) => (
-            <ServiceCard key={serviceData.id} serviceData={serviceData} />
-          ))}
-        </div>
+    <div className='w-full'>
+      <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 lg:gap-y-10 gap-5 justify-items-center w-full'>
+        {servicesData.map((serviceData) => (
+          <ServiceCard key={serviceData.id} serviceData={serviceData} />
+        ))}
       </div>
-    </section>
+    </div>
   );
 };

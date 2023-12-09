@@ -1,11 +1,11 @@
 import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
+import { ServiceSection } from "../../Components/ServiceCard/ServiceSection";
 import { BlogSection } from "./BlogSection";
 import { Documentary } from "./Documentary";
 import { FaqSection } from "./FaqSection";
 import { FormulaSection } from "./FormulaSection";
 import { HeroSlider } from "./HeroSlider";
-import { ServiceSection } from "./ServiceSection";
 
 export const Home = () => {
   return (
@@ -17,7 +17,13 @@ export const Home = () => {
         <Documentary />
 
         {/* service section */}
-        <ServiceSection />
+        <section>
+          <h2 className='text-6xl font-semibold text-black-10 text-center mt-24 mb-16'>
+            Our <span className='text-blue'>Services</span>
+          </h2>
+
+          <ServiceSection />
+        </section>
 
         {/* FormulaSection */}
         <FormulaSection />
