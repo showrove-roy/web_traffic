@@ -4,13 +4,13 @@ export const BuildBrand = () => {
   return (
     <section className=''>
       <div className='h-20 brandSectionBG'></div>
-      <div className='brandSectionBG2 py-14 flex flex-col items-center justify-center'>
-        <h3 className="text-white text-6xl font-semibold">Ready To Build Your Brand?</h3>
-        <p className="py-5 text-white text-3xl font-medium">YOU ARE JUST ONE STEP AWAY TO EXPERIENCE THE PROGRESS.</p>
+      <div className='brandSectionBG2 md:py-14 py-10 flex flex-col items-center justify-center'>
+        <h3 className="text-white md:text-6xl text-2xl text-center font-semibold">Ready To Build Your Brand?</h3>
+        <p className="py-5 text-white lg:text-3xl md:text-lg text-[10px] font-medium">YOU ARE JUST ONE STEP AWAY TO EXPERIENCE THE PROGRESS.</p>
 
         <div className=''>
           <Link to='#'>
-            <button className='text-blue text-xl font-medium btnShadow px-12 py-5 bg-white rounded-[40px]'>
+            <button className='text-blue md:text-xl text-xs font-medium btnShadow px-12 py-5 bg-white rounded-[40px]'>
               Let’s Build Your Business
             </button>
           </Link>

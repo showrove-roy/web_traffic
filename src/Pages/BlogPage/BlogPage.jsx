@@ -98,7 +98,7 @@ export const BlogPage = () => {
       </div>
 
       {/* Load more button */}
-      <div className='my-10  flex justify-center'>
+      <div className='md:my-10 my-5  flex justify-center'>
         <BlueButton btnText={"Load More"} btnLink={"blog"}></BlueButton>
       </div>
 
