@@ -72,6 +72,8 @@ export const AboutUs = () => {
           </div>
         </div>
       </section>
+
+      
       {/* Build a brand Card */}
      <BuildBrand/>
 

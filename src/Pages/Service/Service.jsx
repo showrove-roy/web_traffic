@@ -4,6 +4,7 @@ import webDesign from "../../assets/ServiceSliderIMG/Website designer.svg";
 import seo from "../../assets/ServiceSliderIMG/SEO.svg";
 import { ServiceSection } from "../../Components/ServiceCard/ServiceSection";
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
+import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
 
 export const Service = () => {
   const ServiceSliderData = [
@@ -50,6 +51,8 @@ export const Service = () => {
       {/* Service list */}
       <ServiceSection></ServiceSection>
 
+      {/* Build a brand Card */}
+      <BuildBrand />
       {/* Get into touch */}
       <GetInTouch></GetInTouch>
     </>
