@@ -8,10 +8,9 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 import { BlogCard } from "../../Components/BlogCard/BlogCard";
-import image1 from "../../assets/BolgsImages/Rectangle 1343.png";
-import image2 from "../../assets/BolgsImages/3654b0eb97757fb8f2f1a955b8a3b90c.png";
-import image3 from "../../assets/BolgsImages/5ef99fae19a08e629e5f73477177d65e.jpg";
-import image4 from "../../assets/BolgsImages/f3453abe90b0fb0639b34f1d11cfd99f.png";
+import image1 from "../../assets/BolgsImages/Bimg4.png";
+import image2 from "../../assets/BolgsImages/Bimg2.png";
+import image4 from "../../assets/BolgsImages/Bimg3.png";
 
 export const BlogSection = () => {
   const blogs = [
@@ -36,7 +35,7 @@ export const BlogSection = () => {
       title: "How To Become a Creative Director (or Art Director) in ...",
       subTitle:
         "A creative/art director is one of the most influential executive positions you can achieve in a company.",
-      cardImage: `${image3}`,
+      cardImage: `${image1}`,
       blogLink: "#",
     },
     {
@@ -75,21 +74,11 @@ export const BlogSection = () => {
           }}
           modules={[Navigation]}
           className='mySwiper'>
-          <SwiperSlide>
-            <BlogCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogCard />
-          </SwiperSlide>
-          <SwiperSlide>
-            <BlogCard />
-          </SwiperSlide>
+          {blogs.map((blog) => (
+            <SwiperSlide key={blog.id}>
+              <BlogCard blog={blog} />
+            </SwiperSlide>
+          ))}
         </Swiper>
       </div>
     </section>

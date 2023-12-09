@@ -1,10 +1,11 @@
+/* eslint-disable react/prop-types */
 import { Link } from "react-router-dom";
-import Rectangle from "../../assets/BolgsImages/Rectangle 1343.png";
-export const BlogCard = () => {
+
+export const BlogCard = ({blog}) => {
   return (
     <div className='card card-compact max-w-sm bg-[#EFF2F3] rounded-[40px] mx-auto'>
       <figure>
-        <img src={Rectangle} alt='Shoes' />
+        <img src={`${blog?.cardImage}`} alt='Shoes' />
       </figure>
       <div className='card-body'>
         <h2 className='card-title text-2xl'>
