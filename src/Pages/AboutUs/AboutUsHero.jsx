@@ -25,6 +25,8 @@ export const AboutUsHero = () => {
             alt='All the devices'></video>
         </div>
 
+
+
         <div className='brandSectionBG2 md:h-40 h-20'></div>
       </div>
     </div>
