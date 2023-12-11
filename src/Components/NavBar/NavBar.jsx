@@ -2,13 +2,18 @@ import { Link } from "react-router-dom";
 import Logo from "../../assets/Logo.png";
 import { FiMenu } from "react-icons/fi";
 import { IoClose } from "react-icons/io5";
+import { useState } from "react";
 
 export const NavBar = () => {
+
+
+  const [showNav,setShowNav]=useState(false)
+  console.log(showNav,"asda")
   const Menu = (
     <>
       <li className='px-4'>
         <Link to='/' className='text-black-10 font-semibold'>
-          Home
+        <form method='dialog'><button>Home</button></form>
         </Link>
       </li>
       <li className='px-4'>
@@ -34,7 +39,7 @@ export const NavBar = () => {
     </>
   );
   return (
-    <nav className='bg-[rgba(0,0,0,0.04)] bg-opacity-30 flex items-center'>
+    <nav className={` bg-[rgba(0,0,0,0.04)] bg-opacity-30 flex items-center `}>
       <div className='maxW1600'>
         <div className='flex justify-between items-center'>
           <div className=''>
@@ -48,10 +53,10 @@ export const NavBar = () => {
             <div className='md:hidden block'>
               <div className='flex items-center justify-end'>
                 <FiMenu
-                  className='text-3xl text-blue cursor-pointer'
+                  className='text-3xl text-blue cursor-pointer z-50'
                   onClick={() =>
-                    document.getElementById("my_modal_5").showModal()
-                  }
+                    setShowNav(true)
+                  } size={32}
                 />
               </div>
             </div>
@@ -67,23 +72,54 @@ export const NavBar = () => {
       </div>
 
       {/* Navbar menu models */}
-      <dialog id='my_modal_5' className='modal modal-top md:hidden'>
-        <div className='modal-box max-h-none bg-white h-full p-3 rounded-none'>
-          <div className='modal-action mt-0'>
-            <form method='dialog'>
-              {/* if there is a button in form, it will close the modal */}
-              <button className=''>
-                <IoClose className='text-3xl text-blue cursor-pointer' />
-              </button>
-            </form>
-          </div>
+      <div id='' className={`  fixed w-full h-96 z-50 left-0  ${showNav?'top-0 left-0 ':'-top-96 left-0'}`}>
+        <div className=' bg-white h-full p-3 rounded-none'>
+        <div className="flex items-end justify-end">
+        <IoClose className='   text-3xl text-blue cursor-pointer' size={32}  onClick={() =>
+                    setShowNav(!true)
+                  }/>
+        </div>
           <div className='my-10'>
             <ul className='flex justify-between items-center flex-col gap-y-3'>
-              {Menu}
+            <li className='px-4'>
+           <Link to='/' className='text-black-10 font-semibold'  onClick={() =>
+                    setShowNav(!true)
+                  }>
+        Home
+        </Link>
+      </li>
+      <li className='px-4'>
+        <Link to='/about' className='text-black-10 font-semibold' onClick={() =>
+                    setShowNav(!true)
+                  }>
+          About
+        </Link>
+      </li>
+      <li className='px-4'>
+        <Link to='/service' className='text-black-10 font-semibold'  onClick={() =>
+                    setShowNav(!true)
+                  }>
+          Services
+        </Link>
+      </li>
+      <li className='px-4'  onClick={() =>
+                    setShowNav(!true)
+                  }>
+        <Link to='/blog' className='text-black-10 font-semibold'>
+          Blog
+        </Link>
+      </li>
+      <li className='bg-blue py-[15px] px-[50px] rounded-full cursor-pointer btnShadow'>
+        <Link to='/contact' className='text-white font-semibold'  onClick={() =>
+                    setShowNav(!true)
+                  }>
+          Contacts
+        </Link>
+      </li>
             </ul>
           </div>
         </div>
-      </dialog>
+      </div>
     </nav>
   );
 };
