@@ -16,7 +16,7 @@ import Video2 from "../../assets/video.mp4";
 
 export const HeroSlider = () => {
   return (
-    <section className='heroBG maxW1600'>
+    <section className='heroBG maxW1280'>
       <Swiper
         pagination={true}
         autoplay={{

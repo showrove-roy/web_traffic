@@ -8,7 +8,7 @@ export const AboutUs = () => {
     <>
       {/* About us hero section */}
       <AboutUsHero />
-      <section className='maxW1600 px-5'>
+      <section className='maxW1280 px-5'>
         {/* web traffick details */}
         <div className=' mt-10'>
           <div className='flex flex-col md:flex-row-reverse justify-between md:gap-20 gap-0 items-center'>

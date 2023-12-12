@@ -11,7 +11,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 @layer components {
-  .maxW1600 {
+  .maxW1280 {
     @apply max-w-7xl mx-auto w-full md:py-3 py-1 px-2 md:px-5;
   }
   .heroBG {

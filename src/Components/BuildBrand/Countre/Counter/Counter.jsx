@@ -1,8 +1,6 @@
 import CountUp from 'react-countup';
 
 
-
-
 export const Counter = () => {
   return (
     <section className='mt-0'>

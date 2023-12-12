@@ -14,7 +14,7 @@ import { FaXTwitter } from "react-icons/fa6";
 
 export const GetInTouch = () => {
   return (
-    <section className='maxW1600 py-10 md:mb-20 mb-10'>
+    <section className='maxW1280 py-10 md:mb-20 mb-10'>
       <h2 className='md:text-5xl text-3xl font-semibold text-black-10 text-center mt-5 lg:mt-20'>
         Get In <span className='text-blue'>Touch </span>
       </h2>

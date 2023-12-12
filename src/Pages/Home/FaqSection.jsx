@@ -1,7 +1,7 @@
 import faqSVG from "../../assets/illustration-faq.svg";
 export const FaqSection = () => {
   return (
-    <section className='bg-[#F9FCFD] maxW1600 py-10'>
+    <section className='bg-[#F9FCFD] maxW1280 py-10'>
       <h2 className='text-5xl font-semibold text-black-10 text-center mt-10 lg:mt-24 mb-16'>
         <span className='text-blue'>Frequently </span>Asked Questions
       </h2>

@@ -63,7 +63,7 @@ export const Contact = () => {
       </div>
 
       <div className='relative'>
-        <div className='z-10 maxW1600'>
+        <div className='z-10 maxW1280'>
           <ContactForm></ContactForm>
         </div>
        <div className="absolute bottom-36 left-0 w-full  -z-10">
@@ -72,7 +72,7 @@ export const Contact = () => {
        </div>
       </div>
 
-      <section className='maxW1600'>
+      <section className='maxW1280'>
         <div className='mt-20 mb-10'>
           <h2 className='md:text-6xl text-[32px] font-semibold text-black-10 text-center lg:mt-10 mt-7'>
             This Happens When You Meet

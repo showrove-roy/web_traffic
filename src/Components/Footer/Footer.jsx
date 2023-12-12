@@ -12,7 +12,7 @@ export const Footer = () => {
   return (
     <>
       <footer className='footerBG pt-10 pb-8 h-full'>
-        <div className='maxW1600'>
+        <div className='maxW1280'>
           <div className=''>
             <div className=''>
               <div className='flex flex-col w-full lg:flex-row'>

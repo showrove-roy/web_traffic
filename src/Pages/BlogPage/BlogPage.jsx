@@ -103,7 +103,7 @@ export const BlogPage = () => {
       <CMNSlider sliderData={blogs}></CMNSlider>
 
       {/* blogs */}
-      <div className='maxW1600 md:mt-24 mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-x-8 gap-x-5 lg:gap-y-20 gap-y-8 '>
+      <div className='maxW1280 md:mt-24 mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-x-8 gap-x-5 lg:gap-y-20 gap-y-8 '>
         {blogs.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}

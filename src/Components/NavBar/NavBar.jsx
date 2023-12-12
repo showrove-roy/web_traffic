@@ -8,7 +8,7 @@ export const NavBar = () => {
 
 
   const [showNav,setShowNav]=useState(false)
-  console.log(showNav,"asda")
+ 
   const Menu = (
     <>
       <li className='px-4'>
@@ -40,7 +40,7 @@ export const NavBar = () => {
   );
   return (
     <nav className={` bg-[rgba(0,0,0,0.04)] bg-opacity-30 flex items-center `}>
-      <div className='maxW1600'>
+      <div className='maxW1280'>
         <div className='flex justify-between items-center'>
           <div className=''>
             <div className='w-40'>
