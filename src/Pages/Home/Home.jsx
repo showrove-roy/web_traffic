@@ -1,4 +1,5 @@
 import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
+import { Counter } from "../../Components/BuildBrand/Countre/Counter/Counter";
 
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
 import { ServiceSection } from "../../Components/ServiceCard/ServiceSection";
@@ -35,6 +36,7 @@ export const Home = () => {
 
       {/* Brand section */}
       <BuildBrand />
+      <Counter/>
 
       {/* FAQ Section */}
       <FaqSection />
