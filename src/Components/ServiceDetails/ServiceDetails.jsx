@@ -2,6 +2,7 @@ import { ServiceHeroSection } from "./ServiceHeroSection";
 import digitalMarketing from "../../assets/ServiceSliderIMG/digital marketing.svg";
 import SMM from "../../assets/Service Icon/ic_smm.svg";
 import { ServiceDetailsCard } from "./ServiceDetailsCard";
+import { FaqSection } from "../../Pages/Home/FaqSection";
 
 export const ServiceDetails = () => {
   // hero section data
@@ -78,11 +79,14 @@ export const ServiceDetails = () => {
       </div>
 
       {/* service description card */}
-      <div className='my-10 grid lg:grid-cols-3 md:grid-cols-2 lg:gap-20 gap-10 px-3 2xl:px-0'>
+      <div className='lg:my-20 my-10 grid lg:grid-cols-3 md:grid-cols-2 lg:gap-20 gap-10 px-3 2xl:px-0'>
         {
           serviceSData.map((serviceData)=> <ServiceDetailsCard key={serviceData.id} serviceData={serviceData}></ServiceDetailsCard>)
         }
       </div>
+
+      {/* FAQ Section */}
+      <FaqSection/>
     </section>
   );
 };

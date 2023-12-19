@@ -39,7 +39,10 @@ export const Home = () => {
       <Counter/>
 
       {/* FAQ Section */}
+      <div className="bg-[#F9FCFD] lg:pt-14">
+        
       <FaqSection />
+      </div>
 
       {/* Get In Touch */}
       <section className='bg-[#F9FCFD] '>
