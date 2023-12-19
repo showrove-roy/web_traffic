@@ -81,8 +81,8 @@ export const Contact = () => {
         </div>
 
         <div className='grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-x-8 md:gap-y-12 gap-6'>
-          {meetUSData.map((meetDada) => (
-            <MeetUs key={meetDada.id} meetDada={meetDada}></MeetUs>
+          {meetUSData.map((meetData) => (
+            <MeetUs key={meetData.id} meetData={meetData}></MeetUs>
           ))}
         </div>
 
