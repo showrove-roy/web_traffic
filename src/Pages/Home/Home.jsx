@@ -30,9 +30,13 @@ export const Home = () => {
         {/* FormulaSection */}
         <FormulaSection />
 
-        {/* Blog section */}
-        <BlogSection />
+      
       </section>
+
+        {/* Blog section */}
+       <div className="bg-[#F9FCFD] md:px-5 max-w-7xl mx-auto">
+       <BlogSection />
+       </div>
 
       {/* Brand section */}
       <BuildBrand />
