@@ -1,8 +1,11 @@
+/* eslint-disable react/no-unescaped-entities */
 import { ServiceHeroSection } from "./ServiceHeroSection";
 import digitalMarketing from "../../assets/ServiceSliderIMG/digital marketing.svg";
 import SMM from "../../assets/Service Icon/ic_smm.svg";
 import { ServiceDetailsCard } from "./ServiceDetailsCard";
 import { FaqSection } from "../../Pages/Home/FaqSection";
+import { OtherServicesSection } from "./OtherServicesSection";
+
 
 export const ServiceDetails = () => {
   // hero section data
@@ -80,13 +83,24 @@ export const ServiceDetails = () => {
 
       {/* service description card */}
       <div className='lg:my-20 my-10 grid lg:grid-cols-3 md:grid-cols-2 lg:gap-20 gap-10 px-3 2xl:px-0'>
-        {
-          serviceSData.map((serviceData)=> <ServiceDetailsCard key={serviceData.id} serviceData={serviceData}></ServiceDetailsCard>)
-        }
+        {serviceSData.map((serviceData) => (
+          <ServiceDetailsCard
+            key={serviceData.id}
+            serviceData={serviceData}></ServiceDetailsCard>
+        ))}
       </div>
 
       {/* FAQ Section */}
-      <FaqSection/>
+      <FaqSection />
+
+      {/* related service section */}
+      <h2 className='md:text-5xl text-3xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
+        Let's Check Other Services
+      </h2>
+
+      <div className='my-10'>
+        <OtherServicesSection/>
+      </div>
     </section>
   );
 };
