@@ -36,11 +36,11 @@ export const router = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
-        path: "/service/digital-marketing",
+        path: "/service/digitalmarketing",
         element: <ServiceDetails></ServiceDetails>,
       },
       {
-        path: "/blog/blog-details",
+        path: "/blog/blogdetails",
         element: <BlogDetails></BlogDetails>
       },
     ],
