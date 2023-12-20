@@ -17,7 +17,7 @@ export const BlogCard = ({blog}) => {
         </p>
         <div className='card-actions justify-start mt-5 mb-3'>
           <Link
-            to=''
+            to={`/${blog.BtnLink}`}
             className='md:py-3 py-2 md:px-8 px-5 text-blue font-medium border-2 border-blue rounded-full hover:btnShadow w-fit text-sm'>
             Read More
           </Link>

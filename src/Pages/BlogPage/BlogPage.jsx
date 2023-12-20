@@ -15,7 +15,7 @@ export const BlogPage = () => {
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
       image: `${image1}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
     {
@@ -24,7 +24,7 @@ export const BlogPage = () => {
       subTitle:
         "Two years ago, a scammer falsely claiming to be Dusyanthan Balasubramanian, a Bizcope employee, sent countless threatening emails ...",
       image: `${image2}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
     {
@@ -33,7 +33,7 @@ export const BlogPage = () => {
       subTitle:
         "A creative/art director is one of the most influential executive positions you can achieve in a company.",
       image: `${image4}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
     {
@@ -42,7 +42,7 @@ export const BlogPage = () => {
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
       image: `${image4}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
     {
@@ -51,7 +51,7 @@ export const BlogPage = () => {
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
       image: `${image4}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
     {
@@ -60,7 +60,7 @@ export const BlogPage = () => {
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
       image: `${image4}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
     {
@@ -69,7 +69,7 @@ export const BlogPage = () => {
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
       image: `${image4}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
     {
@@ -78,7 +78,7 @@ export const BlogPage = () => {
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
       image: `${image4}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
     {
@@ -87,7 +87,7 @@ export const BlogPage = () => {
       subTitle:
         "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
       image: `${image4}`,
-      BtnLink: "#",
+      BtnLink: "blogdetails",
       btnText: "Read More",
     },
   ];
