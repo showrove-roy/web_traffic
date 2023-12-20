@@ -7,6 +7,7 @@ import { Service } from "../../Pages/Service/Service";
 import { Contact } from "../../Pages/Contact/Contact";
 import { Error404 } from "../../Pages/Error404/Error404";
 import { ServiceDetails } from "../../Components/ServiceDetails/ServiceDetails";
+import { BlogDetails } from "../../Components/BlogDetails/BlogDetails";
 
 export const router = createBrowserRouter([
   {
@@ -37,6 +38,10 @@ export const router = createBrowserRouter([
       {
         path: "/service/digital-marketing",
         element: <ServiceDetails></ServiceDetails>,
+      },
+      {
+        path: "/blog/blog-details",
+        element: <BlogDetails></BlogDetails>
       },
     ],
   },

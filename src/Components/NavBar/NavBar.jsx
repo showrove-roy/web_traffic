@@ -31,8 +31,8 @@ export const NavBar = () => {
           Blog
         </Link>
       </li>
-      <li className='bg-blue py-[15px] px-[50px] rounded-full cursor-pointer btnShadow'>
-        <Link to='/contact' className='text-white font-semibold'>
+      <li className=''>
+        <Link to='/contact' className='text-white font-semibold bg-blue py-[15px] px-[50px] rounded-full cursor-pointer btnShadow'>
           Contacts
         </Link>
       </li>
