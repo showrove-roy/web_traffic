@@ -18,7 +18,7 @@ export const ServiceSection = () => {
       subTitle:
         "Digital marketing creates opportunities for small and medium business enterprises to compete with larger business entities.",
       btnText: "Get Started",
-      btnLink: "service",
+      btnLink: "digitalmarketing",
     },
     {
       id: 2,
@@ -27,7 +27,7 @@ export const ServiceSection = () => {
       subTitle:
         "If you aren’t sure how you should proceed in promoting your brand let us analyze your business to take most effective plan.",
       btnText: "Get Started",
-      btnLink: "service",
+      btnLink: "digitalmarketing",
     },
     {
       id: 3,
