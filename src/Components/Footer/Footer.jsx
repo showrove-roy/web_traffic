@@ -26,16 +26,16 @@ export const Footer = () => {
                     <div className=''>
                       <ul className='list-disc text-white ms-5'>
                         <li>
-                          <Link to='/'>About</Link>
+                          <Link to='/about'>About</Link>
                         </li>
                         <li>
-                          <Link to='/'>Blog</Link>
+                          <Link to='/blog'>Blog</Link>
                         </li>
                         <li>
                           <Link to='/'>Career</Link>
                         </li>
                         <li>
-                          <Link to='/'>Contact</Link>
+                          <Link to='/contact'>Contact</Link>
                         </li>
                       </ul>
                     </div>
