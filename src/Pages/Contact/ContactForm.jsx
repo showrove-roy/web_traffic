@@ -1,13 +1,39 @@
 import { useForm } from "react-hook-form";
+import emailjs from 'emailjs-com';
+import toast from "react-hot-toast";
+
 
 export const ContactForm = () => {
+
+  const USER_ID = 'V6nSayB_P4EsccFXj';
+  const SERVICE_ID = 'service_8ohnj45';
+  const TEMPLATE_ID = 'template_7yb38hf';
+
+
+
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors },
   } = useForm();
-  const handelGetData = (data) => {
-    console.log(data);
+
+
+  const handelGetData = async (data) => {
+    const messageData = {
+      from_name: data?.first_name,
+      to_name: 'Southside nurseries',
+      message: data?.message,
+      email: data?.email
+    }
+    try {
+      // Send email using emailjs
+      await emailjs.send(SERVICE_ID, TEMPLATE_ID, messageData, USER_ID);
+      toast.success('Email sent successfully!')
+      reset()
+    } catch (error) {
+      console.error('Error sending email:', error);
+    }
   };
   return (
     <form
