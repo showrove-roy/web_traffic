@@ -33,7 +33,7 @@ export const GetInTouch = () => {
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium'>
                     <IoLocationOutline className='text-6xl text-blue hidden lg:block' />
-                    52 Argyle Rd Apt #1C Brooklyn New York 11218 USA
+                    244 E 8th St Brooklyn New York 11218 USA
                   </p>
                 </div>
                 {/* Contact */}
@@ -48,7 +48,6 @@ export const GetInTouch = () => {
                   <p className='flex gap-5 items-center mt-3 lg:text-lg text-sm text-black font-medium'>
                     <MdEmail className='text-2xl text-blue hidden lg:block' />
                     webtmusa@gmail.com
-
                   </p>
                 </div>
                 {/* time */}

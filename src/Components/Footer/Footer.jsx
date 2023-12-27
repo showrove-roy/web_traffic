@@ -110,7 +110,7 @@ export const Footer = () => {
                         <div className='flex items-center gap-5'>
                           <FaLocationDot className='text-blue text-3xl' />
                           <p className='font-medium'>
-                            52 Argyle Rd Apt #1C <br /> Brooklyn New York 11218 USA
+                            244 E 8th St Brooklyn New York 11218 USA
                           </p>
                         </div>
                         <div className='flex items-center gap-5 my-2'>
@@ -123,8 +123,7 @@ export const Footer = () => {
                         </div>
                         <div className='flex items-center gap-5'>
                           <IoMdMail className='text-blue text-xl' />
-                          <p className='font-medium'>webtmusa@gmail.com
- </p>
+                          <p className='font-medium'>webtmusa@gmail.com</p>
                         </div>
                       </div>
                     </div>
