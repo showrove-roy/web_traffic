@@ -123,7 +123,8 @@ export const Footer = () => {
                         </div>
                         <div className='flex items-center gap-5'>
                           <IoMdMail className='text-blue text-xl' />
-                          <p className='font-medium'>hello@wtm.com </p>
+                          <p className='font-medium'>webtmusa@gmail.com
+ </p>
                         </div>
                       </div>
                     </div>

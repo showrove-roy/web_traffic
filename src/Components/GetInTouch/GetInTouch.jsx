@@ -47,7 +47,8 @@ export const GetInTouch = () => {
                   </p>
                   <p className='flex gap-5 items-center mt-3 lg:text-lg text-sm text-black font-medium'>
                     <MdEmail className='text-2xl text-blue hidden lg:block' />
-                    hello@wtm.com
+                    webtmusa@gmail.com
+
                   </p>
                 </div>
                 {/* time */}
