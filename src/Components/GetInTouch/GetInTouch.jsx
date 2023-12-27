@@ -45,7 +45,7 @@ export const GetInTouch = () => {
                     <IoMdCall className='text-2xl text-blue hidden lg:block' />
                     1917-327-2801 <br /> 1425-546-4513
                   </p>
-                  <p className='flex gap-5 items-center mt-3 lg:text-lg text-sm text-black font-medium'>
+                  <p className='flex gap-5 items-center mt-3 lg:text-base text-sm text-black font-medium'>
                     <MdEmail className='text-2xl text-blue hidden lg:block' />
                     webtmusa@gmail.com
                   </p>

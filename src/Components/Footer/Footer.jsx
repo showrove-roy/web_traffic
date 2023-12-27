@@ -31,9 +31,7 @@ export const Footer = () => {
                         <li>
                           <Link to='/blog'>Blog</Link>
                         </li>
-                        <li>
-                          <Link to='/'>Career</Link>
-                        </li>
+                        
                         <li>
                           <Link to='/contact'>Contact</Link>
                         </li>

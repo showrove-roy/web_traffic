@@ -4,8 +4,8 @@ export const BuildBrand = () => {
   return (
     <>
       <section className=''>
-        <div className='h-20 brandSectionBG'></div>
-        <div className='brandSectionBG2 md:py-14 py-10 flex flex-col items-center justify-center'>
+        <div className='h-20 brandSectionBG maxW1280'></div>
+        <div className='brandSectionBG2 md:py-14 py-10 flex flex-col items-center justify-center maxW1280'>
           <h3 className='text-white md:text-6xl text-2xl text-center font-semibold'>
             Ready To Build Your Brand?
           </h3>
