@@ -29,23 +29,20 @@ export const Home = () => {
 
         {/* FormulaSection */}
         <FormulaSection />
-
-      
       </section>
 
-        {/* Blog section */}
-       <div className="bg-[#F9FCFD] md:px-5 max-w-7xl mx-auto">
-       <BlogSection />
-       </div>
+      {/* Blog section */}
+      <div className='bg-[#F9FCFD] md:px-5 max-w-7xl mx-auto'>
+        <BlogSection />
+      </div>
 
       {/* Brand section */}
       <BuildBrand />
-      <Counter/>
+      <Counter />
 
       {/* FAQ Section */}
-      <div className="bg-[#F9FCFD] lg:pt-14">
-        
-      <FaqSection />
+      <div className='bg-[#F9FCFD] lg:pt-14'>
+        <FaqSection />
       </div>
 
       {/* Get In Touch */}

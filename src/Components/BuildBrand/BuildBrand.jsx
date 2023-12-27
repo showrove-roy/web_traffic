@@ -14,7 +14,7 @@ export const BuildBrand = () => {
           </p>
 
           <div className=''>
-            <Link to='#'>
+            <Link to='/contact'>
               <button className='text-blue md:text-xl text-xs font-medium btnShadow px-12 py-5 bg-white rounded-[40px]'>
                 Let’s Build Your Business
               </button>
