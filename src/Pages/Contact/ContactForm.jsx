@@ -5,9 +5,9 @@ import toast from "react-hot-toast";
 
 export const ContactForm = () => {
 
-  const USER_ID = 'V6nSayB_P4EsccFXj';
-  const SERVICE_ID = 'service_8ohnj45';
-  const TEMPLATE_ID = 'template_7yb38hf';
+  const USER_ID = 'i2_fEpDFiS8yX-gUi';
+  const SERVICE_ID = 'service_g0xwnqh';
+  const TEMPLATE_ID = 'template_llblbo4';
 
 
 
@@ -17,14 +17,24 @@ export const ContactForm = () => {
     reset,
     formState: { errors },
   } = useForm();
-
-
+  
   const handelGetData = async (data) => {
+    console.log(data,"check")
     const messageData = {
       from_name: data?.first_name,
-      to_name: 'Southside nurseries',
+      to_name: 'Web Traffic',
       message: data?.message,
-      email: data?.email
+      email: data?.email,
+      phoneNumber:data?.phone_num,
+      webSite:data?.url,
+      SEO:data?.SEO,
+  digital_Marketing:data?.digital_Marketing,
+
+  eCommerce_Website_Development:data?.eCommerce_Website_Development,
+  
+  graphics_Design:data?.graphics_Design
+  
+  
     }
     try {
       // Send email using emailjs
@@ -33,6 +43,7 @@ export const ContactForm = () => {
       reset()
     } catch (error) {
       console.error('Error sending email:', error);
+      
     }
   };
   return (
@@ -132,7 +143,7 @@ export const ContactForm = () => {
             </span>
           </div>
           <input
-            type='url'
+            type='text'
             placeholder='www.example.com'
             className='input w-full formInputBox focus:outline-none focus:border-blue'
             {...register("url")}
