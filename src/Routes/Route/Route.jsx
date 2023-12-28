@@ -36,7 +36,7 @@ export const router = createBrowserRouter([
         element: <Contact></Contact>,
       },
       {
-        path: "/digitalmarketing",
+        path: "/service/:id",
         element: <ServiceDetails></ServiceDetails>,
       },
       {

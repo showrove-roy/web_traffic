@@ -1,3 +1,4 @@
+/* eslint-disable no-undef */
 /* eslint-disable react/no-unescaped-entities */
 // Import Swiper React components
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -19,19 +20,28 @@ import image2 from "../../assets/BolgsImages/Bimg2.png";
 import image4 from "../../assets/BolgsImages/Bimg3.png";
 import { BlogCard } from "../BlogCard/BlogCard";
 import { GetInTouch } from "../GetInTouch/GetInTouch";
+import { useParams } from "react-router-dom";
+import { Loading } from "../Loading/Loading";
+import axios from "axios";
+import { useQuery } from "@tanstack/react-query";
 
 
 export const ServiceDetails = () => {
-  // hero section data
-  const data = {
-    id: 1,
-    title: "Digital Marketing",
-    subTitle:
-      "Digital marketing creates opportunities for small and medium business enterprises to compete with larger business entities.",
-    image: `${digitalMarketing}`,
-    btnText: "Get Start",
-    BtnLink: "#",
-  };
+const {id}=useParams();
+console.log(id);
+
+const { isLoading, data } = useQuery({
+  queryKey: ["singleService"],
+  queryFn: () => axios.get(`/single-category/${id}`, {}),
+});
+
+if (isLoading) {
+  return <Loading />;
+}
+
+let services = data.data.data;
+console.log("🚀 ~ file: ServiceDetails.jsx:42 ~ ServiceDetails ~ services:", services)
+
 
   // service us data
   const serviceSData = [
@@ -110,7 +120,7 @@ export const ServiceDetails = () => {
     <section className='maxW1280 '>
       {/* Hero section */}
       <div className='relative'>
-        <ServiceHeroSection data={data} />
+        <ServiceHeroSection Header={services.Header} />
         <div className='CMNSliderBG h-32 w-full absolute left-0 bottom-0'></div>
       </div>
 
@@ -118,14 +128,14 @@ export const ServiceDetails = () => {
       <div className=''>
         <h2 className='md:text-5xl text-3xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           Our <br className='md:hidden ' />
-          <span className='text-blue'> Digital Marketing </span>{" "}
+          <span className='text-blue'> {services?.name} </span>
           <br className='md:hidden ' /> Services
         </h2>
       </div>
 
       {/* service description card */}
       <div className='lg:my-20 my-10 grid lg:grid-cols-3 md:grid-cols-2 lg:gap-20 gap-10 px-3 2xl:px-0'>
-        {serviceSData.map((serviceData) => (
+        {services?.SubCatagory.map((serviceData) => (
           <ServiceDetailsCard
             key={serviceData.id}
             serviceData={serviceData}></ServiceDetailsCard>
@@ -133,7 +143,7 @@ export const ServiceDetails = () => {
       </div>
 
       {/* FAQ Section */}
-      <FaqSection />
+      <FaqSection faqs={services?.CatagoryFaq} />
 
       {/* related service section */}
       <h2 className='md:text-5xl text-3xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>

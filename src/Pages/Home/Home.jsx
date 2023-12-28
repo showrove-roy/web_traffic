@@ -42,7 +42,7 @@ export const Home = () => {
 
       {/* FAQ Section */}
       <div className='bg-[#F9FCFD] lg:pt-14'>
-        <FaqSection />
+        {/* <FaqSection /> */}
       </div>
 
       {/* Get In Touch */}

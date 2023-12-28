@@ -1,9 +1,10 @@
+/* eslint-disable react/prop-types */
 import { BlueButton } from "../BlueButton/BlueButton";
 
 // eslint-disable-next-line react/prop-types
 export const ServiceCard = ({ services }) => {
-  // eslint-disable-next-line react/prop-types
-  const { picture, name, descripton } = services;
+console.log(services);
+  const {id, picture, name, descripton } = services;
   return (
     <div className='serviceCardBg rounded-3xl h-[450px] w-[300px]  p-7 '>
       <div className='flex justify-center'>
@@ -16,7 +17,7 @@ export const ServiceCard = ({ services }) => {
         <p className='text-center text-base text-[#000]'>{descripton}</p>
 
         <div className='mt-10 flex justify-center '>
-          <BlueButton btnLink={``} btnText={"Get Started"} />
+          <BlueButton btnLink={`service/${id}`} btnText={"Get Started"} />
         </div>
       </div>
     </div>

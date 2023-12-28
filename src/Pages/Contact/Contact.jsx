@@ -10,6 +10,7 @@ import finger from "../../assets/MeetUSIcon/Vector.svg";
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
 
 export const Contact = () => {
+
   const meetUSData = [
     {
       id: 1,
