@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+import { Link, useLoaderData } from "react-router-dom";
 import Bimg1 from "../../assets/BolgsImages/Bimg1.jpg";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { BlogCard } from "../BlogCard/BlogCard";
@@ -6,8 +6,10 @@ import image1 from "../../assets/BolgsImages/Bimg4.png";
 import image2 from "../../assets/BolgsImages/Bimg2.png";
 import image4 from "../../assets/BolgsImages/Bimg3.png";
 export const BlogDetails = () => {
-   // Blogs
-   const blogs = [
+  const data = useLoaderData();
+  console.log("🚀 ~ file: BlogDetails.jsx:10 ~ BlogDetails ~ data:", data)
+  // Blogs
+  const blogs = [
     {
       id: 1,
       title: "JCI Dhaka Founders Elects Nahid Hasan as 2024 ...",
@@ -123,8 +125,7 @@ export const BlogDetails = () => {
         {/* divider */}
         <div className='divider before:bg-[#D9D9D9] after:bg-[#D9D9D9] max-w-[1280px] w-full py-5 mx-auto'></div>
 
-
-{/* Blog share option  */}
+        {/* Blog share option  */}
         <div className='md:px-5 flex justify-between items-center'>
           <div className='flex gap-3'>
             <Link
@@ -138,19 +139,22 @@ export const BlogDetails = () => {
               <FaLinkedinIn className='text-white text-xl' />
             </Link>
           </div>
-          <div className="faqBG text-[#263238] font-medium md:px-12 px-8 md:py-4 py-3 rounded-xl">DEC, 09, 2023</div>
+          <div className='faqBG text-[#263238] font-medium md:px-12 px-8 md:py-4 py-3 rounded-xl'>
+            DEC, 09, 2023
+          </div>
         </div>
 
-
         {/* Read next blog  */}
-        <div className="mt-20 mb-10">
-          <h4 className="lg:text-4xl md:text-3xl text-2xl font-medium mb-5">Read next : </h4>
+        <div className='mt-20 mb-10'>
+          <h4 className='lg:text-4xl md:text-3xl text-2xl font-medium mb-5'>
+            Read next :{" "}
+          </h4>
 
           <div className='mt-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 px-5 lg:px-0'>
-        {blogs.map((blog) => (
-          <BlogCard key={blog.id} blog={blog} />
-        ))}
-      </div>
+            {blogs.map((blog) => (
+              <BlogCard key={blog.id} blog={blog} />
+            ))}
+          </div>
         </div>
       </div>
     </>

@@ -8,6 +8,7 @@ import { Contact } from "../../Pages/Contact/Contact";
 import { Error404 } from "../../Pages/Error404/Error404";
 import { ServiceDetails } from "../../Components/ServiceDetails/ServiceDetails";
 import { BlogDetails } from "../../Components/BlogDetails/BlogDetails";
+import axios from "axios";
 
 export const router = createBrowserRouter([
   {
@@ -40,7 +41,8 @@ export const router = createBrowserRouter([
         element: <ServiceDetails></ServiceDetails>,
       },
       {
-        path: "/blogdetails",
+        path: "/blog/:id",
+        loader: ({ params }) => axios.get(`/single-blog/${params.id}`),
         element: <BlogDetails></BlogDetails>
       },
     ],

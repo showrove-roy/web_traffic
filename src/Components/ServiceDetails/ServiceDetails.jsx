@@ -10,14 +10,9 @@ import "swiper/css/navigation";
 // import required modules
 import { Navigation } from "swiper/modules";
 import { ServiceHeroSection } from "./ServiceHeroSection";
-import digitalMarketing from "../../assets/ServiceSliderIMG/digital marketing.svg";
-import SMM from "../../assets/Service Icon/ic_smm.svg";
 import { ServiceDetailsCard } from "./ServiceDetailsCard";
 import { FaqSection } from "../../Pages/Home/FaqSection";
 import { OtherServicesSection } from "./OtherServicesSection";
-import image1 from "../../assets/BolgsImages/Bimg4.png";
-import image2 from "../../assets/BolgsImages/Bimg2.png";
-import image4 from "../../assets/BolgsImages/Bimg3.png";
 import { BlogCard } from "../BlogCard/BlogCard";
 import { GetInTouch } from "../GetInTouch/GetInTouch";
 import { useParams } from "react-router-dom";
@@ -25,97 +20,24 @@ import { Loading } from "../Loading/Loading";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 
-
 export const ServiceDetails = () => {
-const {id}=useParams();
-console.log(id);
+  const { id } = useParams();
 
-const { isLoading, data } = useQuery({
-  queryKey: ["singleService"],
-  queryFn: () => axios.get(`/single-category/${id}`, {}),
-});
+  const { isLoading, data } = useQuery({
+    queryKey: ["singleService"],
+    queryFn: () => axios.get(`/single-category/${id}`, {}),
+  });
 
-if (isLoading) {
-  return <Loading />;
-}
+  if (isLoading) {
+    return <Loading />;
+  }
 
-let services = data.data.data;
-console.log("🚀 ~ file: ServiceDetails.jsx:42 ~ ServiceDetails ~ services:", services)
+  let services = data.data.data;
+  console.log(
+    "🚀 ~ file: ServiceDetails.jsx:42 ~ ServiceDetails ~ services:",
+    services
+  );
 
-
-  // service us data
-  const serviceSData = [
-    {
-      id: 1,
-      img: `${SMM}`,
-      title: "Building Strength",
-      description:
-        "We together build a strong relationship, which will increase the strength of our work.",
-    },
-    {
-      id: 2,
-      img: `${SMM}`,
-      title: "Building Strength",
-      description:
-        "We together build a strong relationship, which will increase the strength of our work.",
-    },
-    {
-      id: 3,
-      img: `${SMM}`,
-      title: "Building Strength",
-      description:
-        "We together build a strong relationship, which will increase the strength of our work.",
-    },
-    {
-      id: 4,
-      img: `${SMM}`,
-      title: "Building Strength",
-      description:
-        "We together build a strong relationship, which will increase the strength of our work.",
-    },
-    {
-      id: 5,
-      img: `${SMM}`,
-      title: "Building Strength",
-      description:
-        "We together build a strong relationship, which will increase the strength of our work.",
-    },
-    {
-      id: 6,
-      img: `${SMM}`,
-      title: "Building Strength",
-      description:
-        "We together build a strong relationship, which will increase the strength of our work.",
-    },
-  ];
-
-  // Blogs
-  const blogs = [
-    {
-      id: 1,
-      title: "JCI Dhaka Founders Elects Nahid Hasan as 2024 ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image1}`,
-      blogLink: "#",
-    },
-    {
-      id: 2,
-      title: "Beware of scammers offering jobs on behalf of us",
-      subTitle:
-        "Two years ago, a scammer falsely claiming to be Dusyanthan Balasubramanian, a Bizcope employee, sent countless threatening emails ...",
-      image: `${image2}`,
-      blogLink: "#",
-    },
-    {
-      id: 3,
-      title: "How To Become a Creative Director (or Art Director) in ...",
-      subTitle:
-        "A creative/art director is one of the most influential executive positions you can achieve in a company.",
-      image: `${image4}`,
-      blogLink: "#",
-    },
-  ];
   return (
     <section className='maxW1280 '>
       {/* Hero section */}
@@ -183,8 +105,8 @@ console.log("🚀 ~ file: ServiceDetails.jsx:42 ~ ServiceDetails ~ services:", s
           }}
           modules={[Navigation]}
           className='mySwiper'>
-          {blogs.map((blog) => (
-            <SwiperSlide key={blog.id}>
+          {services?.CatagoryBlogs?.map((blog, i) => (
+            <SwiperSlide key={i}>
               <BlogCard blog={blog} />
             </SwiperSlide>
           ))}
@@ -192,7 +114,7 @@ console.log("🚀 ~ file: ServiceDetails.jsx:42 ~ ServiceDetails ~ services:", s
       </div>
 
       {/* Get into touch */}
-      <GetInTouch/>
+      <GetInTouch />
     </section>
   );
 };
