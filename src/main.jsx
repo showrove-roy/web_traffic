@@ -6,6 +6,7 @@ import { router } from "./Routes/Route/Route";
 import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { Toaster } from "react-hot-toast";
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <RouterProvider router={router}></RouterProvider>

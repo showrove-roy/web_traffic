@@ -5,6 +5,7 @@ import seo from "../../assets/ServiceSliderIMG/SEO.svg";
 import { ServiceSection } from "../../Components/ServiceCard/ServiceSection";
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
 import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 
 export const Service = () => {
   const ServiceSliderData = [
@@ -37,7 +38,9 @@ export const Service = () => {
     },
   ];
   return (
+
     <>
+    <ScrollToTop/>
       <div className=''>
         <h2 className='md:text-6xl text-4xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           Our

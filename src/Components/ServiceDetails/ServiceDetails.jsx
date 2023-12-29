@@ -19,6 +19,7 @@ import image2 from "../../assets/BolgsImages/Bimg2.png";
 import image4 from "../../assets/BolgsImages/Bimg3.png";
 import { BlogCard } from "../BlogCard/BlogCard";
 import { GetInTouch } from "../GetInTouch/GetInTouch";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 
 export const ServiceDetails = () => {
@@ -108,6 +109,7 @@ export const ServiceDetails = () => {
   ];
   return (
     <section className='maxW1280 '>
+      <ScrollToTop/>
       {/* Hero section */}
       <div className='relative'>
         <ServiceHeroSection data={data} />

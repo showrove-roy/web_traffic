@@ -80,9 +80,8 @@ export const HeroSlider = () => {
 
                 <video
                   className='  absolute  w-[76.7%] h-[91.3%] top-[-1.9%] left-[11.5%] '
-                  src={Video}
-                  muted
-                  autoPlay
+                  src="https://www.youtube.com/watch?v=9wZOYBs_cqM&list=RD9wZOYBs_cqM&start_radio=1"
+               
                   loop
                   alt='All the devices'></video>
               </div>
@@ -126,7 +125,8 @@ export const HeroSlider = () => {
                   src={Video2}
                   muted
                   autoPlay
-                  loop
+                
+                  
                   alt='All the devices'></video>
               </div>
             </div>
