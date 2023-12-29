@@ -22,7 +22,6 @@ export const Footer = () => {
   }
 
   let services = data.data.data;
-  console.log("🚀 ~ file: Footer.jsx:25 ~ Footer ~ services:", services)
 
   return (
     <>
@@ -54,7 +53,8 @@ export const Footer = () => {
                     </div>
                     <div className='mt-3 flex gap-2'>
                       <Link
-                        to='/'
+                        to='https://www.facebook.com/webtmusa'
+                        target='_blank'
                         className='w-8 h-8 bg-white flex justify-center items-center rounded-full'>
                         <FaFacebook className='text-blue text-xl' />
                       </Link>
@@ -96,7 +96,6 @@ export const Footer = () => {
                           <Link to={`/service/${ser?.id}`}>{ser?.name}</Link>
                         </li>
                       ))}
-                     
                     </ul>
                   </div>
                 </div>

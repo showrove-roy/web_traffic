@@ -14,7 +14,7 @@ import { ServiceDetailsCard } from "./ServiceDetailsCard";
 import { FaqSection } from "../../Pages/Home/FaqSection";
 import { OtherServicesSection } from "./OtherServicesSection";
 import { GetInTouch } from "../GetInTouch/GetInTouch";
-import { useParams } from "react-router-dom";
+import { useLoaderData, useParams } from "react-router-dom";
 import { Loading } from "../Loading/Loading";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
@@ -23,6 +23,7 @@ import { FeaturedBlogCard } from "../FeaturedBlogCard/FeaturedBlogCard";
 
 export const ServiceDetails = () => {
   const { id } = useParams();
+  const serviceData = useLoaderData();
 
   const { isLoading, data } = useQuery({
     queryKey: ["singleService"],
@@ -33,8 +34,13 @@ export const ServiceDetails = () => {
     return <Loading />;
   }
 
-  let services = data.data.data;
-
+  let services 
+  // store Service data
+  if (serviceData?.data?.success) {
+    services = serviceData?.data?.data;
+  } else {
+    services = data?.data?.data;
+  }
 
   return (
     <section className='maxW1280 '>

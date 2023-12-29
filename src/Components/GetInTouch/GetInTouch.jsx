@@ -67,7 +67,8 @@ export const GetInTouch = () => {
                   <div className=''>
                     <div className='mt-3 grid grid-cols-3 gap-2 md:gap-7 justify-items-center'>
                       <Link
-                        to='/'
+                      target="_blank"
+                        to='https://www.facebook.com/webtmusa'
                         className='w-9 h-9 bg-blue flex justify-center items-center rounded-full'>
                         <FaFacebook className='text-white text-xl' />
                       </Link>
