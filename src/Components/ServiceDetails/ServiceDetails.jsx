@@ -33,10 +33,7 @@ export const ServiceDetails = () => {
   }
 
   let services = data.data.data;
-  console.log(
-    "🚀 ~ file: ServiceDetails.jsx:42 ~ ServiceDetails ~ services:",
-    services
-  );
+
 
   return (
     <section className='maxW1280 '>

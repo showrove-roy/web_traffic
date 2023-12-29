@@ -1,7 +1,7 @@
 /* eslint-disable react/prop-types */
 import faqSVG from "../../assets/illustration-faq.svg";
 export const FaqSection = ({ faqs }) => {
-  console.log("🚀 ~ file: FaqSection.jsx:3 ~ FaqSection ~ faqs:", faqs)
+ 
   return (
     <section className=' maxW1280 py-10'>
       <h2 className='text-5xl font-semibold text-black-10 text-center mt-10 mb-16'>

@@ -3,7 +3,6 @@ import { BlueButton } from "../BlueButton/BlueButton";
 
 // eslint-disable-next-line react/prop-types
 export const ServiceCard = ({ services }) => {
-console.log(services);
   const {id, picture, name, descripton } = services;
   return (
     <div className='serviceCardBg rounded-3xl h-[450px] w-[300px]  p-7 '>
