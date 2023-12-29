@@ -27,6 +27,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/blog",
+        loader: () => axios.get('/all-blog'),
         element: <BlogPage></BlogPage>,
       },
       {

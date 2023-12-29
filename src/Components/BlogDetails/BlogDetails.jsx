@@ -27,7 +27,7 @@ export const BlogDetails = () => {
   // single service data load
   const { isLoading: loading, data: allBlog } = useQuery({
     queryKey: ["allBlog"],
-    queryFn: () => axios.get("/all-blogs", {}),
+    queryFn: () => axios.get("/all-blog", {}),
   });
 
   // filter next to read blogs

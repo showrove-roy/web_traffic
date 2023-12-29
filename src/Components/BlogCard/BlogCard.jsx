@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 export const BlogCard = ({ blog }) => {
   return (
-    <div className='card card-compact xl:max-w-sm max-w-[350px] bg-[#EFF2F3] rounded-3xl lg:rounded-[40px] mx-auto sm:w-full w-60'>
+    <div className='card card-compact xl:max-w-sm max-w-[350px] bg-[#EFF2F3] rounded-3xl lg:rounded-[40px] mx-auto sm:w-full w-60  max-h-[30rem]'>
       <figure>
         <img src={`${blog?.picture}`} alt='Shoes' />
       </figure>
@@ -15,8 +15,8 @@ export const BlogCard = ({ blog }) => {
           {blog?.descripton
             ?.replace(/<[^>]*>?/gm, "")
             ?.split(" ")
-            ?.slice(0, 30)
-            ?.join(" ")}{" "}
+            ?.slice(0, 15)
+            ?.join(" ")}
           ...
         </p>
         <div className='card-actions justify-start mt-5 mb-3'>
