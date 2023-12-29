@@ -5,34 +5,38 @@ import { BlogCard } from "../BlogCard/BlogCard";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Loading } from "../Loading/Loading";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 export const BlogDetails = () => {
   const { id } = useParams();
   const blogDatas = useLoaderData();
-  console.log("🚀 ~ file: BlogDetails.jsx:11 ~ BlogDetails ~ blogDatas:", blogDatas)
-  
 
-  // // blog data load
-  // const { isLoading, data: singleB } = useQuery({
-  //   queryKey: ["singleBlog"],
-  //   queryFn: () => axios.get(`/single-blogs/${id}`, {}),
-  // });
+  // blog data load
+  const { isLoading, data: singleB } = useQuery({
+    queryKey: ["singleBlog"],
+    queryFn: () => axios.get(`/single-blogs/${id}`, {}),
+  });
 
-  let blog = blogDatas?.data?.data;
-  console.log(
-    "🚀 ~ file: BlogDetails.jsx:24 ~ BlogDetails ~ singleBlog:",
-    blog
-  );
+  // store blog data
+  let blog;
+  if (blogDatas?.data?.success) {
+    blog = blogDatas?.data?.data;
+  } else {
+    blog = singleB?.data?.data;
+  }
 
   // single service data load
   const { isLoading: loading, data: allBlog } = useQuery({
     queryKey: ["allBlog"],
-    queryFn: () => axios.get('/all-blogs', {}),
+    queryFn: () => axios.get("/all-blogs", {}),
   });
 
+  // filter next to read blogs
   let allBlogs = allBlog?.data?.data;
-  console.log("🚀 ~ file: BlogDetails.jsx:30 ~ BlogDetails ~ allBlogs:", allBlogs)
- 
+  const readNextBlog = allBlogs?.filter((idx) => {
+    return idx.id != blog?.id;
+  });
 
+  // convert time
   const originalTimestamp = `${blog?.createdAt}`;
   const formattedDate = new Date(originalTimestamp).toLocaleDateString(
     "en-US",
@@ -43,12 +47,13 @@ export const BlogDetails = () => {
     }
   );
 
-  if (loading) {
+  if (loading || isLoading) {
     return <Loading />;
   }
 
   return (
     <>
+      <ScrollToTop />
       <div className='lg:mb-52 min-[425px]:mb-52 min-[375px]:mb-36 mb-28 '>
         <div className='lg:h-[28rem] md:h-80 sm:h-60 h-48 w-full relative'>
           {/* background image*/}
@@ -117,18 +122,18 @@ export const BlogDetails = () => {
             </Link>
           </div>
           <div className='faqBG text-[#263238] font-medium md:px-12 px-8 md:py-4 py-3 rounded-xl'>
-            DEC, 09, 2023
+            {formattedDate}
           </div>
         </div>
 
         {/* Read next blog  */}
         <div className='mt-20 mb-10'>
           <h4 className='lg:text-4xl md:text-3xl text-2xl font-medium mb-5'>
-            Read next :{" "}
+            Read next :
           </h4>
 
           <div className='mt-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 px-5 lg:px-0'>
-            {allBlogs.map((blog) => (
+            {readNextBlog?.map((blog) => (
               <BlogCard key={blog.id} blog={blog} />
             ))}
           </div>

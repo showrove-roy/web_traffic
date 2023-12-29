@@ -19,6 +19,7 @@ import { useParams } from "react-router-dom";
 import { Loading } from "../Loading/Loading";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
+import ScrollToTop from "../ScrollToTop/ScrollToTop";
 
 export const ServiceDetails = () => {
   const { id } = useParams();
@@ -37,6 +38,7 @@ export const ServiceDetails = () => {
 
   return (
     <section className='maxW1280 '>
+      <ScrollToTop/>
       {/* Hero section */}
       <div className='relative'>
         <ServiceHeroSection Header={services.Header} />
