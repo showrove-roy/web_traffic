@@ -26,7 +26,7 @@ export const Documentary = () => {
                 we have grown high-level expertise in this industry.
               </p>
               <div className='mt-4 flex justify-center md:justify-start'>
-                <BlueButton btnLink={"#"} btnText={"Learn More"} />
+                <BlueButton btnLink={"contact"} btnText={"Learn More"} />
               </div>
             </div>
           </div>
@@ -55,7 +55,7 @@ export const Documentary = () => {
                 clients.
               </p>
               <div className='mt-4 flex justify-center md:justify-start'>
-                <BlueButton btnLink={"#"} btnText={"Learn More"} />
+                <BlueButton btnLink={"contact"} btnText={"Learn More"} />
               </div>
             </div>
           </div>
