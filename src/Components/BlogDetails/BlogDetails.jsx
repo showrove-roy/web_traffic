@@ -1,40 +1,52 @@
-import { Link, useLoaderData } from "react-router-dom";
-import Bimg1 from "../../assets/BolgsImages/Bimg1.jpg";
+/* eslint-disable no-unused-vars */
+import { Link, useLoaderData, useParams } from "react-router-dom";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
 import { BlogCard } from "../BlogCard/BlogCard";
-import image1 from "../../assets/BolgsImages/Bimg4.png";
-import image2 from "../../assets/BolgsImages/Bimg2.png";
-import image4 from "../../assets/BolgsImages/Bimg3.png";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { Loading } from "../Loading/Loading";
 export const BlogDetails = () => {
-  const data = useLoaderData();
-  console.log("🚀 ~ file: BlogDetails.jsx:10 ~ BlogDetails ~ data:", data)
-  // Blogs
-  const blogs = [
+  const { id } = useParams();
+  const blogDatas = useLoaderData();
+  console.log("🚀 ~ file: BlogDetails.jsx:11 ~ BlogDetails ~ blogDatas:", blogDatas)
+  
+
+  // // blog data load
+  // const { isLoading, data: singleB } = useQuery({
+  //   queryKey: ["singleBlog"],
+  //   queryFn: () => axios.get(`/single-blogs/${id}`, {}),
+  // });
+
+  let blog = blogDatas?.data?.data;
+  console.log(
+    "🚀 ~ file: BlogDetails.jsx:24 ~ BlogDetails ~ singleBlog:",
+    blog
+  );
+
+  // single service data load
+  const { isLoading: loading, data: allBlog } = useQuery({
+    queryKey: ["allBlog"],
+    queryFn: () => axios.get('/all-blogs', {}),
+  });
+
+  let allBlogs = allBlog?.data?.data;
+  console.log("🚀 ~ file: BlogDetails.jsx:30 ~ BlogDetails ~ allBlogs:", allBlogs)
+ 
+
+  const originalTimestamp = `${blog?.createdAt}`;
+  const formattedDate = new Date(originalTimestamp).toLocaleDateString(
+    "en-US",
     {
-      id: 1,
-      title: "JCI Dhaka Founders Elects Nahid Hasan as 2024 ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image1}`,
-      blogLink: "#",
-    },
-    {
-      id: 2,
-      title: "Beware of scammers offering jobs on behalf of us",
-      subTitle:
-        "Two years ago, a scammer falsely claiming to be Dusyanthan Balasubramanian, a Bizcope employee, sent countless threatening emails ...",
-      image: `${image2}`,
-      blogLink: "#",
-    },
-    {
-      id: 3,
-      title: "How To Become a Creative Director (or Art Director) in ...",
-      subTitle:
-        "A creative/art director is one of the most influential executive positions you can achieve in a company.",
-      image: `${image4}`,
-      blogLink: "#",
-    },
-  ];
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    }
+  );
+
+  if (loading) {
+    return <Loading />;
+  }
+
   return (
     <>
       <div className='lg:mb-52 min-[425px]:mb-52 min-[375px]:mb-36 mb-28 '>
@@ -42,7 +54,7 @@ export const BlogDetails = () => {
           {/* background image*/}
           <img
             className='w-full h-full object-cover absolute '
-            src={`${Bimg1}`}
+            src={`${blog?.picture}`}
             alt=''
           />
           <div className='absolute w-full h-full bg-blue opacity-80'></div>
@@ -56,7 +68,11 @@ export const BlogDetails = () => {
           <div className='absolute lg:-bottom-[45%] -bottom-1/3 mt-14  left-1/2 -translate-x-1/2 w-full h-full px-5 mx-auto'>
             <div className='card lg:max-w-2xl max-w-md max-h-96 shadow-xl image-full w-full mx-auto'>
               <figure>
-                <img className='w-full h-full' src={`${Bimg1}`} alt='Shoes' />
+                <img
+                  className='w-full h-full'
+                  src={`${blog?.picture}`}
+                  alt='Shoes'
+                />
               </figure>
             </div>
           </div>
@@ -66,60 +82,21 @@ export const BlogDetails = () => {
       {/* Blog title section */}
       <div className='lg:max-w-4xl md:max-w-3xl max-w-xl mx-auto mb-10 px-5'>
         <h2 className='text-center text-black lg:text-5xl md:text-4xl sm:text-3xl text-xl font-semibold '>
-          Pixels and Possibilities: Navigating the Impact of AI on the World of
-          Photography
+          {blog?.title}
         </h2>
 
         <p className='mt-5 text-blue md:text-2xl text-xs font-medium text-center'>
-          <span className='pr-1 md:pr-5'>By Robert Downey</span> |{" "}
-          <span className='pl-1 md:pl-5'>November 2, 2023</span>
+          <span className='pl-1 md:pl-5'>{formattedDate}</span>
         </p>
       </div>
 
       <div className='maxW1280'>
         <div className=''>
           <p className='lg:text-2xl md:text-xl sm:text-base text-xs'>
-            We’re super excited to announce that Nahid Hasan, the visionary
-            founder and CEO of Bizcope has been elected as the President of JCI
-            Dhaka Founders, a local chapter of JCI Bangladesh, for the year
-            2024. This prestigious announcement was made during the 4th General
-            Membership Meeting (GMM) and General Assembly, held at Hotel Sarina
-            on 3rd November.
-            <br />
-            <br />
-            JCI represents a dedicated network of youthful and active citizens
-            who are committed to driving positive changes within their
-            communities, operating in over 120 countries. Its headquarters is in
-            St. Louis, Missouri, USA, and the local chapter “JCI Dhaka Founders”
-            was established in 2023 to empower young professionals and
-            entrepreneurs to make a difference in Bangladesh.
-            <br />
-            <br />
-            <br />
-            The new committee for the upcoming year comprises a team of
-            successful founders, with M Asif Rahman as Founding President,
-            Saidur Mamun Khan as Executive Vice President (EVP), and Razia
-            Sultana, Ashikul Islam Tamal, and Amjad Shuvo as Vice Presidents
-            (VP). The election proceedings were overseen by Fazle Munim, the
-            President of BDC and a respected member of JCI Bangladesh. During
-            the gathering, the organization conducted its annual general meeting
-            for 2023, where Mr. M Asif M Rahman expressed appreciation for the
-            current committee and members. He also conveyed his best wishes to
-            Nahid Hasan’s committee.
-            <br />
-            <br />
-            The new committee for the upcoming year comprises a team of
-            successful founders, with M Asif Rahman as Founding President,
-            Saidur Mamun Khan as Executive Vice President (EVP), and Razia
-            Sultana, Ashikul Islam Tamal, and Amjad Shuvo as Vice Presidents
-            (VP). The election proceedings were overseen by Fazle Munim, the
-            President of BDC and a respected member of JCI Bangladesh.
-            <br />
-            <br />
-            During the gathering, the organization conducted its annual general
-            meeting for 2023, where Mr. M Asif M Rahman expressed appreciation
-            for the current committee and members. He also conveyed his best
-            wishes to Nahid Hasan’s committee.
+            {blog?.descripton
+              ?.replace(/<[^>]*>?/gm, "")
+              ?.split(" ")
+              ?.join(" ")}
           </p>
         </div>
         {/* divider */}
@@ -151,7 +128,7 @@ export const BlogDetails = () => {
           </h4>
 
           <div className='mt-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 px-5 lg:px-0'>
-            {blogs.map((blog) => (
+            {allBlogs.map((blog) => (
               <BlogCard key={blog.id} blog={blog} />
             ))}
           </div>

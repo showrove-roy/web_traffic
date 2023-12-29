@@ -42,7 +42,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/blog/:id",
-        loader: ({ params }) => axios.get(`/single-blog/${params.id}`),
+        loader: ({ params }) => axios.get(`/single-blogs/${params.id}`),
         element: <BlogDetails></BlogDetails>
       },
     ],
