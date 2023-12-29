@@ -71,7 +71,7 @@ export const ServiceDetails = () => {
         Let's Check Other Services
       </h2>
       <div className='my-10'>
-        <OtherServicesSection />
+        <OtherServicesSection id={services?.id} />
       </div>
 
       {/* Featured Blogs */}

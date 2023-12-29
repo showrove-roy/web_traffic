@@ -10,7 +10,6 @@ import { Autoplay, Pagination } from "swiper/modules";
 
 import { Link } from "react-router-dom";
 export const CMNSlider = ({ sliderData }) => {
-  console.log(sliderData);
   return (
     <section className='maxW1280 relative md:mb-24 mb-10'>
       <Swiper

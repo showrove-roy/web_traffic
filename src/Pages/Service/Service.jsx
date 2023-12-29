@@ -11,27 +11,27 @@ export const Service = () => {
     {
       id: 1,
       title: "Digital Marketing",
-      subTitle:
+      descripton:
         "Digital marketing creates opportunities for small and medium business enterprises to compete with larger business entities.",
-      image: `${digitalMarketing}`,
+      picture: `${digitalMarketing}`,
       btnText: "Get Start",
       BtnLink: "#",
     },
     {
       id: 2,
       title: "Web Design & Development",
-      subTitle:
+      descripton:
         "Professional web Designing is the first step to showcase your brand and convert visitors into buyers.",
-      image: `${webDesign}`,
+      picture: `${webDesign}`,
       btnText: "Get Start",
       BtnLink: "#",
     },
     {
       id: 3,
       title: "Search Engine Optimization",
-      subTitle:
+      descripton:
         "SEO is a part of Digital marketing that help your targeted customers to find you in search engine results and take action.",
-      image: `${seo}`,
+      picture: `${seo}`,
       btnText: "Get Start",
       BtnLink: "#",
     },

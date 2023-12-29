@@ -7,6 +7,7 @@ import { useLoaderData } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Loading } from "../../Components/Loading/Loading";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 
 export const BlogPage = () => {
   const blogDatas = useLoaderData();
@@ -30,6 +31,7 @@ export const BlogPage = () => {
 
   return (
     <>
+    <ScrollToTop/>
       <div className=''>
         <h2 className='md:text-6xl text-4xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           Marketing
