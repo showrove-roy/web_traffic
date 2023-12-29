@@ -12,10 +12,12 @@ export const BlogCard = ({ blog }) => {
           {blog?.title}
         </h2>
         <p className='md:text-base text-xs mt-2'>
-          {blog?.descripton?.replace(/<[^>]*>?/gm, "")
-                ?.split(" ")
-                ?.slice(0, 30)
-                ?.join(" ")} ...
+          {blog?.descripton
+            ?.replace(/<[^>]*>?/gm, "")
+            ?.split(" ")
+            ?.slice(0, 30)
+            ?.join(" ")}{" "}
+          ...
         </p>
         <div className='card-actions justify-start mt-5 mb-3'>
           <Link

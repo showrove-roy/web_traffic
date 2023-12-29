@@ -13,13 +13,13 @@ import { ServiceHeroSection } from "./ServiceHeroSection";
 import { ServiceDetailsCard } from "./ServiceDetailsCard";
 import { FaqSection } from "../../Pages/Home/FaqSection";
 import { OtherServicesSection } from "./OtherServicesSection";
-import { BlogCard } from "../BlogCard/BlogCard";
 import { GetInTouch } from "../GetInTouch/GetInTouch";
 import { useParams } from "react-router-dom";
 import { Loading } from "../Loading/Loading";
 import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
+import { FeaturedBlogCard } from "../FeaturedBlogCard/FeaturedBlogCard";
 
 export const ServiceDetails = () => {
   const { id } = useParams();
@@ -106,7 +106,7 @@ export const ServiceDetails = () => {
           className='mySwiper'>
           {services?.CatagoryBlogs?.map((blog, i) => (
             <SwiperSlide key={i}>
-              <BlogCard blog={blog} />
+              <FeaturedBlogCard blog={blog} />
             </SwiperSlide>
           ))}
         </Swiper>
