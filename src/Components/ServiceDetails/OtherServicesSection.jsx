@@ -22,8 +22,9 @@ export const OtherServicesSection = ({ id }) => {
 
   return (
     <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1  md:gap-10 gap-5 mx-auto'>
-      {otherServices?.map((othSer)=><OtherServicesCard key={othSer.id} othSer={othSer} />)}
-      
+      {otherServices.slice(0, 6)?.map((othSer) => (
+        <OtherServicesCard key={othSer.id} othSer={othSer} />
+      ))}
     </div>
   );
 };

@@ -7,8 +7,23 @@ import { FaYoutube } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
 import { IoMdMail } from "react-icons/io";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { Loading } from "../Loading/Loading";
 
 export const Footer = () => {
+  const { isLoading, data } = useQuery({
+    queryKey: ["getAll Service"],
+    queryFn: () => axios.get("/all-category", {}),
+  });
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  let services = data.data.data;
+  console.log("🚀 ~ file: Footer.jsx:25 ~ Footer ~ services:", services)
+
   return (
     <>
       <footer className='footerBG pt-10 pb-8 h-full'>
@@ -31,7 +46,7 @@ export const Footer = () => {
                         <li>
                           <Link to='/blog'>Blog</Link>
                         </li>
-                        
+
                         <li>
                           <Link to='/contact'>Contact</Link>
                         </li>
@@ -76,24 +91,12 @@ export const Footer = () => {
                     </h3>
 
                     <ul className='list-disc text-white ms-5'>
-                      <li>
-                        <Link to='/'>Digital Marketing</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Graphic Design</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Content Writing</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Video Editing</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Lead Generation</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Other Services</Link>
-                      </li>
+                      {services?.slice(0, 6)?.map((ser) => (
+                        <li key={ser?.id}>
+                          <Link to={`/service/${ser?.id}`}>{ser?.name}</Link>
+                        </li>
+                      ))}
+                     
                     </ul>
                   </div>
                 </div>
