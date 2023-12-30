@@ -10,6 +10,7 @@ import axios from "axios";
 axios.defaults.baseURL = "https://web-traffic-six.vercel.app/api/v1";
 const queryClient = new QueryClient();
 
+
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
