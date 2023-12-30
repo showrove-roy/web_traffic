@@ -1,18 +1,18 @@
 /* eslint-disable no-unused-vars */
 import { Link, useLoaderData, useParams } from "react-router-dom";
 import { FaFacebook, FaLinkedinIn } from "react-icons/fa";
-import { BlogCard } from "../BlogCard/BlogCard";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Loading } from "../Loading/Loading";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
-export const BlogDetails = () => {
+import { FeaturedBlogCard } from "../FeaturedBlogCard/FeaturedBlogCard";
+export const FeaturedBlogDetails = () => {
   const { id } = useParams();
   const blogDatas = useLoaderData();
 
   // blog data load
   const { isLoading, data: singleB } = useQuery({
-    queryKey: ["singleBlog"],
+    queryKey: ["feuSingleBlog"],
     queryFn: () => axios.get(`/single-blogs/${id}`, {}),
   });
 
@@ -26,8 +26,8 @@ export const BlogDetails = () => {
 
   // single service data load
   const { isLoading: loading, data: allBlog } = useQuery({
-    queryKey: ["allBlog"],
-    queryFn: () => axios.get("/all-blog", {}),
+    queryKey: ["feuAllBlog"],
+    queryFn: () => axios.get("/all-blogs", {}),
   });
 
   // filter next to read blogs
@@ -134,7 +134,7 @@ export const BlogDetails = () => {
 
           <div className='mt-12 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 gap-10 px-5 lg:px-0'>
             {readNextBlog?.map((blog) => (
-              <BlogCard key={blog.id} blog={blog} />
+              <FeaturedBlogCard key={blog.id} blog={blog} />
             ))}
           </div>
         </div>

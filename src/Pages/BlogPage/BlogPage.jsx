@@ -1,98 +1,60 @@
-import image1 from "../../assets/BolgsImages/Bimg4.png";
-import image2 from "../../assets/BolgsImages/Bimg2.png";
-import image4 from "../../assets/BolgsImages/Bimg3.png";
 import { BlogCard } from "../../Components/BlogCard/BlogCard";
 import { BlueButton } from "../../Components/BlueButton/BlueButton";
 import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
 import { CMNSlider } from "../../Components/CmnSlider/CMNSlider";
+import { useLoaderData } from "react-router-dom";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { Loading } from "../../Components/Loading/Loading";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
+import { useState } from "react";
 
 export const BlogPage = () => {
-  const blogs = [
-    {
-      id: 1,
-      title: "JCI Dhaka Founders Elects Nahid Hasan as 2024 ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image1}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-    {
-      id: 2,
-      title: "Beware of scammers offering jobs on behalf of us",
-      subTitle:
-        "Two years ago, a scammer falsely claiming to be Dusyanthan Balasubramanian, a Bizcope employee, sent countless threatening emails ...",
-      image: `${image2}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-    {
-      id: 3,
-      title: "How To Become a Creative Director (or Art Director) in ...",
-      subTitle:
-        "A creative/art director is one of the most influential executive positions you can achieve in a company.",
-      image: `${image4}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-    {
-      id: 4,
-      title: "What a Creative Director (or Art Director) in ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image4}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-    {
-      id: 5,
-      title: "What a Creative Director (or Art Director) in ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image4}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-    {
-      id: 6,
-      title: "What a Creative Director (or Art Director) in ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image4}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-    {
-      id: 7,
-      title: "What a Creative Director (or Art Director) in ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image4}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-    {
-      id: 8,
-      title: "What a Creative Director (or Art Director) in ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image4}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-    {
-      id: 9,
-      title: "What a Creative Director (or Art Director) in ...",
-      subTitle:
-        "We’re super excited to announce that Nahid Hasan, the visionary founder and CEO of Bizcope has been elected as the President ...",
-      image: `${image4}`,
-      BtnLink: "blogdetails",
-      btnText: "Read More",
-    },
-  ];
+  const blogDatas = useLoaderData();
+  
+const blogsdata=blogDatas?.data?.data
+console.log(blogsdata.length,"de")
+  // blog data load
+  const { isLoading, data: allBlog } = useQuery({
+    queryKey: ["allBloges"],
+    queryFn: () => axios.get("/all-blog", {}),
+  });
+
+  // store blog data
+  let blog;
+  if (blogDatas?.data?.success) {
+    blog = blogDatas?.data?.data;
+  } else {
+    blog = allBlog?.data?.data;
+  }
+ 
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [currentPage ,setCurrentPage]  = useState(1)
+  const PER_PAGE_ITEM = 2 ;
+  const startIndex =  (currentPage - 1) * PER_PAGE_ITEM ;
+  const endIndex = startIndex + PER_PAGE_ITEM ;
+  const currentData = blogsdata?.slice(startIndex , endIndex);
+  const totalPages = Math.ceil(blogsdata?.length / PER_PAGE_ITEM);
+console.log(totalPages,"f")
+
+  const nextPageHandlar = () => {
+    
+      setCurrentPage(currentPage + 1 )
+  
+  }
+  const previousPageHandlar = () =>  {
+    if(currentPage >  1) {
+      setCurrentPage( currentPage - 1)
+    }
+  }
+  if (isLoading) {
+    return <Loading />;
+  }
   return (
     <>
+    <ScrollToTop/>
       <div className=''>
         <h2 className='md:text-6xl text-4xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           Marketing
@@ -100,19 +62,26 @@ export const BlogPage = () => {
         </h2>
       </div>
       {/* Slider */}
-      <CMNSlider sliderData={blogs}></CMNSlider>
+      <CMNSlider sliderData={blog}></CMNSlider>
 
       {/* blogs */}
       <div className='maxW1280 md:mt-24 mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-x-8 gap-x-5 lg:gap-y-20 gap-y-8 '>
-        {blogs.map((blog) => (
+        {Array.from(currentData)&&currentData.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
       </div>
 
       {/* Load more button */}
-      <div className='md:my-10 my-5  flex justify-center'>
-        <BlueButton btnText={"Load More"} btnLink={"blog"}></BlueButton>
-      </div>
+    
+      {currentData.length > 0 ? (
+  <div onClick={nextPageHandlar} disabled={currentPage === totalPages} className='md:my-10 my-5  flex justify-center'>
+    <BlueButton btnText={"Load More"} btnLink={"blog"}></BlueButton>
+  </div>
+) : (
+  <div onClick={previousPageHandlar} disabled={currentPage === totalPages} className='md:my-10 my-5  flex justify-center'>
+    <BlueButton btnText={"Previous"} btnLink={"blog"}></BlueButton>
+  </div>
+)}
 
       {/* Build a brand Card */}
       <BuildBrand />

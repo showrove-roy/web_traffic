@@ -7,8 +7,22 @@ import { FaYoutube } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdCall } from "react-icons/io";
 import { IoMdMail } from "react-icons/io";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
+import { Loading } from "../Loading/Loading";
 
 export const Footer = () => {
+  const { isLoading, data } = useQuery({
+    queryKey: ["getAll Service"],
+    queryFn: () => axios.get("/all-category", {}),
+  });
+
+  if (isLoading) {
+    return <Loading />;
+  }
+
+  let services = data.data.data;
+
   return (
     <>
       <footer className='footerBG pt-10 pb-8 h-full'>
@@ -31,9 +45,7 @@ export const Footer = () => {
                         <li>
                           <Link to='/blog'>Blog</Link>
                         </li>
-                        <li>
-                          <Link to='/'>Career</Link>
-                        </li>
+
                         <li>
                           <Link to='/contact'>Contact</Link>
                         </li>
@@ -41,7 +53,8 @@ export const Footer = () => {
                     </div>
                     <div className='mt-3 flex gap-2'>
                       <Link
-                        to='/'
+                        to='https://www.facebook.com/webtmusa'
+                        target='_blank'
                         className='w-8 h-8 bg-white flex justify-center items-center rounded-full'>
                         <FaFacebook className='text-blue text-xl' />
                       </Link>
@@ -78,24 +91,11 @@ export const Footer = () => {
                     </h3>
 
                     <ul className='list-disc text-white ms-5'>
-                      <li>
-                        <Link to='/'>Digital Marketing</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Graphic Design</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Content Writing</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Video Editing</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Lead Generation</Link>
-                      </li>
-                      <li>
-                        <Link to='/'>Other Services</Link>
-                      </li>
+                      {services?.slice(0, 6)?.map((ser) => (
+                        <li key={ser?.id}>
+                          <Link to={`/service/${ser?.id}`}>{ser?.name}</Link>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
@@ -110,7 +110,7 @@ export const Footer = () => {
                         <div className='flex items-center gap-5'>
                           <FaLocationDot className='text-blue text-3xl' />
                           <p className='font-medium'>
-                            52 Argyle Rd Apt #1C <br /> Brooklyn New York 11218 USA
+                            244 E 8th St Brooklyn New York 11218 USA
                           </p>
                         </div>
                         <div className='flex items-center gap-5 my-2'>
@@ -123,8 +123,7 @@ export const Footer = () => {
                         </div>
                         <div className='flex items-center gap-5'>
                           <IoMdMail className='text-blue text-xl' />
-                          <p className='font-medium'>webtmusa@gmail.com
- </p>
+                          <p className='font-medium'>webtmusa@gmail.com</p>
                         </div>
                       </div>
                     </div>

@@ -33,7 +33,7 @@ export const GetInTouch = () => {
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium'>
                     <IoLocationOutline className='text-6xl text-blue hidden lg:block' />
-                    52 Argyle Rd Apt #1C Brooklyn New York 11218 USA
+                    244 E 8th St Brooklyn New York 11218 USA
                   </p>
                 </div>
                 {/* Contact */}
@@ -45,10 +45,9 @@ export const GetInTouch = () => {
                     <IoMdCall className='text-2xl text-blue hidden lg:block' />
                     1917-327-2801 <br /> 1425-546-4513
                   </p>
-                  <p className='flex gap-5 items-center mt-3 lg:text-lg text-sm text-black font-medium'>
+                  <p className='flex gap-5 items-center mt-3 lg:text-base text-sm text-black font-medium'>
                     <MdEmail className='text-2xl text-blue hidden lg:block' />
                     webtmusa@gmail.com
-
                   </p>
                 </div>
                 {/* time */}
@@ -68,7 +67,8 @@ export const GetInTouch = () => {
                   <div className=''>
                     <div className='mt-3 grid grid-cols-3 gap-2 md:gap-7 justify-items-center'>
                       <Link
-                        to='/'
+                      target="_blank"
+                        to='https://www.facebook.com/webtmusa'
                         className='w-9 h-9 bg-blue flex justify-center items-center rounded-full'>
                         <FaFacebook className='text-white text-xl' />
                       </Link>

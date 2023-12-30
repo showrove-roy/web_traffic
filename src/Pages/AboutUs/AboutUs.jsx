@@ -2,10 +2,12 @@ import { AboutUsHero } from "./AboutUsHero";
 import aboutUs from "../../assets/about-us.svg";
 import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 
 export const AboutUs = () => {
   return (
     <>
+    <ScrollToTop/>
       {/* About us hero section */}
       <AboutUsHero />
       <section className='maxW1280 px-5'>

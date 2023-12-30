@@ -8,8 +8,10 @@ import manHead from "../../assets/MeetUSIcon/Vector-1.svg";
 import hart from "../../assets/MeetUSIcon/Vector-2.svg";
 import finger from "../../assets/MeetUSIcon/Vector.svg";
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 
 export const Contact = () => {
+
   const meetUSData = [
     {
       id: 1,
@@ -56,6 +58,7 @@ export const Contact = () => {
   ];
   return (
     <>
+    <ScrollToTop/>
       <div className=''>
         <h2 className='md:text-6xl text-4xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           <span className='text-blue'>Contact</span> Us

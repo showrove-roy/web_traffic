@@ -1,5 +1,7 @@
+/* eslint-disable react/prop-types */
 import faqSVG from "../../assets/illustration-faq.svg";
-export const FaqSection = () => {
+export const FaqSection = ({ faqs }) => {
+ 
   return (
     <section className=' maxW1280 py-10'>
       <h2 className='text-5xl font-semibold text-black-10 text-center mt-10 mb-16'>
@@ -13,74 +15,21 @@ export const FaqSection = () => {
           </div>
           <div className='md:w-3/5 w-full'>
             <div className='lg:max-w-none max-w-xl mx-auto'>
+
               {/* Faq 1*/}
-              <div
-                tabIndex={0}
+              {faqs.map((faQ,i)=><div key={i}
+                tabIndex={i}
                 className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
                 <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
-                  For Example: This is a random Demo question ?
+                 {faQ?.Question}
                 </div>
                 <div className='collapse-content faqBG'>
                   <p className='md:text-base text-sm text-black pt-2'>
-                    Here is the brief demo answer to the above eample random
-                    demo question.Here is the brief demo answer to the above
-                    eample random demo question .Here is the brief demo answer
-                    to the above eample random demo question.. Here is the brief
-                    demo answer to the above eample random demo question.
+                  {faQ?.Answer}
                   </p>
                 </div>
-              </div>
-              {/* Faq2 */}
-              <div
-                tabIndex={0}
-                className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
-                <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
-                  For Example: This is a random Demo question ?
-                </div>
-                <div className='collapse-content faqBG'>
-                  <p className='md:text-base text-sm text-black pt-2'>
-                    Here is the brief demo answer to the above eample random
-                    demo question.Here is the brief demo answer to the above
-                    eample random demo question .Here is the brief demo answer
-                    to the above eample random demo question.. Here is the brief
-                    demo answer to the above eample random demo question.
-                  </p>
-                </div>
-              </div>
-              {/* Faq 3*/}
-              <div
-                tabIndex={0}
-                className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
-                <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
-                  For Example: This is a random Demo question ?
-                </div>
-                <div className='collapse-content faqBG'>
-                  <p className='md:text-base text-sm text-black pt-2'>
-                    Here is the brief demo answer to the above eample random
-                    demo question.Here is the brief demo answer to the above
-                    eample random demo question .Here is the brief demo answer
-                    to the above eample random demo question.. Here is the brief
-                    demo answer to the above eample random demo question.
-                  </p>
-                </div>
-              </div>
-              {/* Faq 4*/}
-              <div
-                tabIndex={0}
-                className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
-                <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
-                  For Example: This is a random Demo question ?
-                </div>
-                <div className='collapse-content faqBG'>
-                  <p className='md:text-base text-sm text-black pt-2'>
-                    Here is the brief demo answer to the above eample random
-                    demo question.Here is the brief demo answer to the above
-                    eample random demo question .Here is the brief demo answer
-                    to the above eample random demo question.. Here is the brief
-                    demo answer to the above eample random demo question.
-                  </p>
-                </div>
-              </div>
+              </div>)}
+              
             </div>
           </div>
         </div>
