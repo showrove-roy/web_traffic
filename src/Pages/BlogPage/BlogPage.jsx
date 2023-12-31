@@ -14,7 +14,7 @@ export const BlogPage = () => {
   const blogDatas = useLoaderData();
   
 const blogsdata=blogDatas?.data?.data
-console.log(blogsdata.length,"de")
+
   // blog data load
   const { isLoading, data: allBlog } = useQuery({
     queryKey: ["allBloges"],
@@ -32,7 +32,7 @@ console.log(blogsdata.length,"de")
 
   // eslint-disable-next-line react-hooks/rules-of-hooks
   const [currentPage ,setCurrentPage]  = useState(1)
-  const PER_PAGE_ITEM = 2 ;
+  const PER_PAGE_ITEM = 9 ;
   const startIndex =  (currentPage - 1) * PER_PAGE_ITEM ;
   const endIndex = startIndex + PER_PAGE_ITEM ;
   const currentData = blogsdata?.slice(startIndex , endIndex);
