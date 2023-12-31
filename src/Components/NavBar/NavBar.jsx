@@ -39,7 +39,7 @@ export const NavBar = () => {
     </>
   );
   return (
-    <nav className={` bg-[rgba(0,0,0,0.04)] bg-opacity-30 flex items-center `}>
+    <nav className='bg-[#e8e8e8] flex items-center sticky top-0 z-50'>
       <div className='maxW1280'>
         <div className='flex justify-between items-center'>
           <div className=''>
