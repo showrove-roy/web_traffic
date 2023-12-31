@@ -8,10 +8,13 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { Loading } from "../../Components/Loading/Loading";
 import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
+import { useState } from "react";
 
 export const BlogPage = () => {
   const blogDatas = useLoaderData();
-
+  
+const blogsdata=blogDatas?.data?.data
+console.log(blogsdata.length,"de")
   // blog data load
   const { isLoading, data: allBlog } = useQuery({
     queryKey: ["allBloges"],
@@ -25,10 +28,30 @@ export const BlogPage = () => {
   } else {
     blog = allBlog?.data?.data;
   }
+ 
+
+  // eslint-disable-next-line react-hooks/rules-of-hooks
+  const [currentPage ,setCurrentPage]  = useState(1)
+  const PER_PAGE_ITEM = 2 ;
+  const startIndex =  (currentPage - 1) * PER_PAGE_ITEM ;
+  const endIndex = startIndex + PER_PAGE_ITEM ;
+  const currentData = blogsdata?.slice(startIndex , endIndex);
+  const totalPages = Math.ceil(blogsdata?.length / PER_PAGE_ITEM);
+console.log(totalPages,"f")
+
+  const nextPageHandlar = () => {
+    
+      setCurrentPage(currentPage + 1 )
+  
+  }
+  const previousPageHandlar = () =>  {
+    if(currentPage >  1) {
+      setCurrentPage( currentPage - 1)
+    }
+  }
   if (isLoading) {
     return <Loading />;
   }
-
   return (
     <>
     <ScrollToTop/>
@@ -43,15 +66,22 @@ export const BlogPage = () => {
 
       {/* blogs */}
       <div className='maxW1280 md:mt-24 mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-x-8 gap-x-5 lg:gap-y-20 gap-y-8 '>
-        {blog.map((blog) => (
+        {Array.from(currentData)&&currentData.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
       </div>
 
       {/* Load more button */}
-      <div className='md:my-10 my-5  flex justify-center'>
-        <BlueButton btnText={"Load More"} btnLink={"blog"}></BlueButton>
-      </div>
+    
+      {currentData.length > 0 ? (
+  <div onClick={nextPageHandlar} disabled={currentPage === totalPages} className='md:my-10 my-5  flex justify-center'>
+    <BlueButton btnText={"Load More"} btnLink={"blog"}></BlueButton>
+  </div>
+) : (
+  <div onClick={previousPageHandlar} disabled={currentPage === totalPages} className='md:my-10 my-5  flex justify-center'>
+    <BlueButton btnText={"Previous"} btnLink={"blog"}></BlueButton>
+  </div>
+)}
 
       {/* Build a brand Card */}
       <BuildBrand />

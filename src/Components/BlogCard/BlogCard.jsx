@@ -2,6 +2,7 @@
 import { Link } from "react-router-dom";
 
 export const BlogCard = ({ blog }) => {
+  console.log(blog,"card")
   return (
     <div className='card card-compact xl:max-w-sm max-w-[350px] bg-[#EFF2F3] rounded-3xl lg:rounded-[40px] mx-auto sm:w-full w-60  max-h-[30rem]'>
       <figure>
