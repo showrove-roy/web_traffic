@@ -24,7 +24,7 @@ export const Counter = () => {
           </div>
           <div className='w-full max-w-xs min-h-[10rem] py-10 lg:px-14 px-8 bg-[#fff9f9] rounded-3xl flex flex-col justify-center'>
             <p className='text-blue text-center lg:text-4xl md:text-2xl text-xl font-semibold'>
-              <CountUp end={24} />|<CountUp end={7} />
+              <CountUp end={24} />/<CountUp end={7} />
             </p>
             <p className='text-center lg:text-xl md:text-lg text-base font-semibold'>
               Years Of

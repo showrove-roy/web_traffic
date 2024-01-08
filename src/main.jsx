@@ -10,14 +10,13 @@ import axios from "axios";
 axios.defaults.baseURL = "https://web-traffic-six.vercel.app/api/v1";
 const queryClient = new QueryClient();
 
-
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
     <QueryClientProvider client={queryClient}>
       <RouterProvider router={router}></RouterProvider>
       <FloatingWhatsApp
         phoneNumber='+1-917-327-2801'
-        accountName='Web Traffic'
+        accountName='Web Traffic Magnet'
         allowEsc
         allowClickAway
         notification

@@ -1,5 +1,4 @@
 import { BlogCard } from "../../Components/BlogCard/BlogCard";
-import { BlueButton } from "../../Components/BlueButton/BlueButton";
 import { BuildBrand } from "../../Components/BuildBrand/BuildBrand";
 import { GetInTouch } from "../../Components/GetInTouch/GetInTouch";
 import { CMNSlider } from "../../Components/CmnSlider/CMNSlider";
@@ -12,9 +11,8 @@ import { useState } from "react";
 
 export const BlogPage = () => {
   const blogDatas = useLoaderData();
-  
-const blogsdata=blogDatas?.data?.data
-console.log(blogsdata.length,"de")
+  const [numOfData, setNumOfData] = useState(9);
+
   // blog data load
   const { isLoading, data: allBlog } = useQuery({
     queryKey: ["allBloges"],
@@ -22,39 +20,19 @@ console.log(blogsdata.length,"de")
   });
 
   // store blog data
-  let blog;
+  let blogs;
   if (blogDatas?.data?.success) {
-    blog = blogDatas?.data?.data;
+    blogs = blogDatas?.data?.data;
   } else {
-    blog = allBlog?.data?.data;
+    blogs = allBlog?.data?.data;
   }
- 
 
-  // eslint-disable-next-line react-hooks/rules-of-hooks
-  const [currentPage ,setCurrentPage]  = useState(1)
-  const PER_PAGE_ITEM = 2 ;
-  const startIndex =  (currentPage - 1) * PER_PAGE_ITEM ;
-  const endIndex = startIndex + PER_PAGE_ITEM ;
-  const currentData = blogsdata?.slice(startIndex , endIndex);
-  const totalPages = Math.ceil(blogsdata?.length / PER_PAGE_ITEM);
-console.log(totalPages,"f")
-
-  const nextPageHandlar = () => {
-    
-      setCurrentPage(currentPage + 1 )
-  
-  }
-  const previousPageHandlar = () =>  {
-    if(currentPage >  1) {
-      setCurrentPage( currentPage - 1)
-    }
-  }
   if (isLoading) {
     return <Loading />;
   }
   return (
     <>
-    <ScrollToTop/>
+      <ScrollToTop />
       <div className=''>
         <h2 className='md:text-6xl text-4xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           Marketing
@@ -62,26 +40,24 @@ console.log(totalPages,"f")
         </h2>
       </div>
       {/* Slider */}
-      <CMNSlider sliderData={blog}></CMNSlider>
+      <CMNSlider sliderData={blogs}></CMNSlider>
 
       {/* blogs */}
       <div className='maxW1280 md:mt-24 mt-10 grid lg:grid-cols-3 md:grid-cols-2 grid-cols-1 md:gap-x-8 gap-x-5 lg:gap-y-20 gap-y-8 '>
-        {Array.from(currentData)&&currentData.map((blog) => (
+        {blogs?.slice(0, numOfData)?.map((blog) => (
           <BlogCard key={blog.id} blog={blog} />
         ))}
       </div>
 
-      {/* Load more button */}
-    
-      {currentData.length > 0 ? (
-  <div onClick={nextPageHandlar} disabled={currentPage === totalPages} className='md:my-10 my-5  flex justify-center'>
-    <BlueButton btnText={"Load More"} btnLink={"blog"}></BlueButton>
-  </div>
-) : (
-  <div onClick={previousPageHandlar} disabled={currentPage === totalPages} className='md:my-10 my-5  flex justify-center'>
-    <BlueButton btnText={"Previous"} btnLink={"blog"}></BlueButton>
-  </div>
-)}
+      {blogs.length >= numOfData && (
+        <div className='flex justify-center mb-20 mt-20'>
+          <button
+            onClick={() => setNumOfData(numOfData + 3)}
+            className='py-3 px-8 text-blue border-2 font-medium border-blue rounded-full hover:btnShadow w-fit text-sm'>
+            Load More
+          </button>
+        </div>
+      )}
 
       {/* Build a brand Card */}
       <BuildBrand />
