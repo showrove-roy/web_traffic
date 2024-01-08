@@ -7,11 +7,13 @@ import { BlogSection } from "./BlogSection";
 import { Documentary } from "./Documentary";
 import { FormulaSection } from "./FormulaSection";
 import { HeroSlider } from "./HeroSlider";
+import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
 
 export const Home = () => {
   return (
     <>
       {/* Hero section */}
+      <ScrollToTop/>
       <HeroSlider />
       <section className='bg-[#F9FCFD] maxW1280 py-10'>
         {/* Documentary section */}
@@ -19,7 +21,7 @@ export const Home = () => {
 
         {/* service section */}
         <section>
-          <h2 className='text-6xl font-semibold text-black-10 text-center mt-24 mb-16'>
+          <h2 className='lg:text-6xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-24 mb-16'>
             Our <span className='text-blue'>Services</span>
           </h2>
 
@@ -42,7 +44,7 @@ export const Home = () => {
       {/* FAQ Section */}
       <div className='bg-[#F9FCFD] lg:pt-14'>
         <section className=' maxW1280 py-10'>
-          <h2 className='text-5xl font-semibold text-black-10 text-center mt-10 mb-16'>
+          <h2 className='lg:text-5xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-10 mb-16'>
             <span className='text-blue'>Frequently </span>Asked Questions
           </h2>
 

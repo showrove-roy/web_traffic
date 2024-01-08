@@ -4,7 +4,7 @@ export const FaqSection = ({ faqs }) => {
  
   return (
     <section className=' maxW1280 py-10'>
-      <h2 className='text-5xl font-semibold text-black-10 text-center mt-10 mb-16'>
+      <h2 className='lg:text-5xl md:text-4xl text-xl font-semibold text-black-10 text-center mt-10 mb-16'>
         <span className='text-blue'>Frequently </span>Asked Questions
       </h2>
 

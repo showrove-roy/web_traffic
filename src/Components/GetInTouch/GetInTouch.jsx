@@ -15,7 +15,7 @@ import { FaXTwitter } from "react-icons/fa6";
 export const GetInTouch = () => {
   return (
     <section className='maxW1280 py-10 md:mb-20 mb-10'>
-      <h2 className='md:text-5xl text-3xl font-semibold text-black-10 text-center mt-5 lg:mt-20'>
+      <h2 className='lg:text-5xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-5 lg:mt-20'>
         Get In <span className='text-blue'>Touch </span>
       </h2>
       <div className=''>
@@ -28,7 +28,7 @@ export const GetInTouch = () => {
               <div className='grid grid-cols-2 md:gap-10 gap-3'>
                 {/* Address */}
                 <div className='getInTouchBg md:py-7 py-5 md:px-5 px-3 max-w-[280px] max-h-[250px]'>
-                  <h5 className='md:text-3xl text-black-10 font-semibold text-center'>
+                  <h5 className='lg:text-3xl md:text-lg  text-black-10 font-semibold text-center'>
                     Location
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium'>
@@ -38,7 +38,7 @@ export const GetInTouch = () => {
                 </div>
                 {/* Contact */}
                 <div className='getInTouchBg md:py-7 py-5 md:px-5 px-3 max-w-[280px] max-h-[250px]'>
-                  <h5 className='md:text-3xl text-black-10 font-semibold text-center'>
+                  <h5 className='lg:text-3xl md:text-lg  text-black-10 font-semibold text-center'>
                     Contact Us
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium'>
@@ -52,7 +52,7 @@ export const GetInTouch = () => {
                 </div>
                 {/* time */}
                 <div className='getInTouchBg md:py-7 py-5 md:px-5 px-3 max-w-[280px] max-h-[250px]'>
-                  <h5 className='md:text-3xl text-black-10 font-semibold text-center'>
+                  <h5 className='lg:text-3xl md:text-lg  text-black-10 font-semibold text-center'>
                     Our Hours
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium text-center'>
@@ -61,7 +61,7 @@ export const GetInTouch = () => {
                 </div>
                 {/* Social */}
                 <div className='getInTouchBg md:py-7 py-5 md:px-5 px-3 max-w-[280px] max-h-[250px]'>
-                  <h5 className='md:text-3xl text-black-10 font-semibold text-center'>
+                  <h5 className='lg:text-3xl md:text-lg  text-black-10 font-semibold text-center'>
                     Social
                   </h5>
                   <div className=''>

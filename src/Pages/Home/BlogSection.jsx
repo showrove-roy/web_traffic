@@ -26,7 +26,7 @@ export const BlogSection = () => {
 
   return (
     <section>
-      <h2 className='text-5xl font-semibold text-black-10 text-center pt-10 lg:pt-24 pb-16'>
+      <h2 className='lg:text-5xl md:text-4xl text-3xl font-semibold text-black-10 text-center pt-10 lg:pt-24 pb-16'>
         Blogs & <span className='text-blue'>Updates</span>
       </h2>
 

@@ -5,7 +5,7 @@ import { BlueButton } from "../BlueButton/BlueButton";
 export const ServiceCard = ({ services }) => {
   const { id, picture, name, descripton } = services;
   return (
-    <div className='serviceCardBg rounded-3xl w-[300px]  p-7 '>
+    <div className='serviceCardBg rounded-3xl w-[20rem]  p-7 '>
       <div className='flex justify-center'>
         <img src={picture} alt='' />
       </div>
