@@ -2,23 +2,24 @@
 import { Link } from "react-router-dom";
 
 export const BlogCard = ({ blog }) => {
-  console.log(blog,"card")
+  console.log(blog?.descripton.length);
   return (
-    <div className='card card-compact xl:max-w-sm max-w-[350px] bg-[#EFF2F3] rounded-3xl lg:rounded-[40px] mx-auto sm:w-full w-60  max-h-[30rem]'>
+    <div className='card card-compact xl:max-w-sm max-w-[350px] bg-[#EFF2F3] rounded-3xl  mx-auto sm:w-full w-60  md:h-[30rem] h-[25rem]'>
       <figure>
         <img src={`${blog?.picture}`} alt='Shoes' />
       </figure>
       <div className='card-body'>
-        <h2 className='card-title  md:text-xl sm:text-base text-sm'>
+        <h2 className='card-title md:text-lg sm:text-base text-sm font-medium'>
           {blog?.title}
         </h2>
-        <p className='md:text-base text-xs mt-2'>
+        <p className='md:text-base text-xs mt-2 md:h-20 h-14 text-justify'>
           {blog?.descripton
             ?.replace(/<[^>]*>?/gm, "")
             ?.split(" ")
-            ?.slice(0, 15)
-            ?.join(" ")}
-          ...
+            ?.join(" ")
+            ?.slice(0, 120)}
+
+          {blog?.descripton?.length >= 120 && "..."}
         </p>
         <div className='card-actions justify-start mt-5 mb-3'>
           <Link

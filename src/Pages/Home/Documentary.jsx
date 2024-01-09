@@ -45,7 +45,7 @@ export const Documentary = () => {
             <div className='md:w-1/2 w-full'>
               <h3 className='text-black-10 font-semibold md:text-4xl text-2xl md:text-left text-center'>
                 Grow Your Business with
-                <span className='text-blue'>Our Online Marketing Services</span>
+                <span className='text-blue'> Our Online Marketing Services</span>
               </h3>
               <p className='md:text-xl text-sm md:my-6 my-2 text-black-10 text-justify md:text-left max-w-lg md:max-w-none mx-auto'>
                 Boost your business with our proven Digital Marketing services.

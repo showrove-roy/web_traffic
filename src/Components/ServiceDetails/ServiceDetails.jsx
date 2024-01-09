@@ -53,7 +53,7 @@ export const ServiceDetails = () => {
 
       {/* title  */}
       <div className=''>
-        <h2 className='md:text-5xl text-3xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
+        <h2 className='lg:text-5xl md:text-4xl text-xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           Our <br className='md:hidden ' />
           <span className='text-blue'> {services?.name} </span>
           <br className='md:hidden ' /> Services
@@ -73,7 +73,7 @@ export const ServiceDetails = () => {
       <FaqSection faqs={services?.CatagoryFaq} />
 
       {/* related service section */}
-      <h2 className='md:text-5xl text-3xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
+      <h2 className='lg:text-5xl md:text-4xl text-xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
         Let's Check Other Services
       </h2>
       <div className='my-10'>
@@ -83,7 +83,7 @@ export const ServiceDetails = () => {
       {/* Featured Blogs */}
 
       <div className='mt-32'>
-        <h2 className='md:text-5xl text-3xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
+        <h2 className='lg:text-5xl md:text-4xl text-xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           Featured Blogs on
           <span className='text-blue'> Digital Marketing </span>
         </h2>

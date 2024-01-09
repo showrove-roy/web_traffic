@@ -32,7 +32,7 @@ export const FormulaSection = () => {
 
   return (
     <section className='lg:pb-20 pb-10'>
-      <h2 className='text-5xl font-semibold text-black-10 text-center mt-10 lg:mt-24 mb-16'>
+      <h2 className='lg:text-5xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-10 lg:mt-24 mb-16'>
         Our <span className='text-blue'>Formula</span> for Success
       </h2>
 
