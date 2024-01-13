@@ -35,9 +35,9 @@ export const HeroSlider = () => {
                 <img src={`${Laptop}`} className=' w-[100%]' />
 
                 <video
-                  className='  absolute  w-[68.7%] h-[85.3%] top-[13.1%] left-[13.5%] '
+                  className='  absolute  w-[68.7%] h-[85.3%] top-[13.1%] left-[13.5%] aboutShadow'
                   src={Video}
-             
+             muted
                   autoPlay
                   loop
                   alt='All the devices'></video>
