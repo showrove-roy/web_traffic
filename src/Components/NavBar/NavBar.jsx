@@ -9,8 +9,9 @@ export const NavBar = () => {
 
   const Menu = (
     <>
-      <li className='px-4'>
-        <Link to='/' className='text-black-10 font-semibold'>
+    
+      <li className='px-4 '>
+        <Link to='/' className='text-red-10 font-semibold'>
           <form method='dialog'>
             <button>Home</button>
           </form>
@@ -74,7 +75,7 @@ export const NavBar = () => {
       <div
         id=''
         className={`  fixed w-full h-screen z-50 left-0 md:hidden overflow-auto  ${
-          showNav ? "top-0 left-0 " : "-top-[1000px] left-0"
+          showNav ? "top-0 left-0  fixed" : "-top-[1000px] left-0"
         }`}>
         <div className=' bg-white h-screen p-3 rounded-none overflow-scroll'>
           <div className='flex items-end justify-end'>
