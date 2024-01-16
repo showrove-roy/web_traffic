@@ -1,4 +1,4 @@
-import Video from "../../assets/video1.mp4";
+import Video from "../../assets/BolgsImages/video1 (2).mp4";
 
 export const AboutUsHero = () => {
   return (
