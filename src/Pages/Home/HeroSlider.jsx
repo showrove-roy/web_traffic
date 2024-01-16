@@ -20,6 +20,8 @@ export const HeroSlider = () => {
 
   let heroVideo = data?.data?.data;
 
+ 
+
   return (
     <section className='heroBG maxW1280'>
       <Swiper
