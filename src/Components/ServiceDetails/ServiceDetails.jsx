@@ -48,7 +48,7 @@ export const ServiceDetails = () => {
       {/* Hero section */}
       <div className='relative'>
         <ServiceHeroSection Header={services.Header} />
-        <div className='CMNSliderBG h-32 w-full absolute left-0 bottom-0'></div>
+        <div className='CMNSliderBG h-32 w-full absolute left-0 bottom-0 -z-10'></div>
       </div>
 
       {/* title  */}
@@ -62,7 +62,7 @@ export const ServiceDetails = () => {
 
       {/* service description card */}
       <div className='lg:my-20 my-10 grid lg:grid-cols-3 md:grid-cols-2 lg:gap-20 gap-10 px-3 2xl:px-0'>
-        {services?.SubCatagory.map((serviceData) => (
+        {services?.SubCatagory?.map((serviceData) => (
           <ServiceDetailsCard
             key={serviceData.id}
             serviceData={serviceData}></ServiceDetailsCard>

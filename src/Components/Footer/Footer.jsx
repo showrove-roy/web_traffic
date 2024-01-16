@@ -13,15 +13,21 @@ import { Loading } from "../Loading/Loading";
 
 export const Footer = () => {
   const { isLoading, data } = useQuery({
-    queryKey: ["getAll Service"],
+    queryKey: ["getAllService"],
     queryFn: () => axios.get("/all-category", {}),
   });
 
+  const { data: cnt } = useQuery({
+    queryKey: ["contact"],
+    queryFn: () => axios.get("/single-contact/3", {}),
+  });
+
+  let allContact = cnt?.data?.data;
+
+  let services = data?.data?.data;
   if (isLoading) {
     return <Loading />;
   }
-
-  let services = data.data.data;
 
   return (
     <>
@@ -109,21 +115,19 @@ export const Footer = () => {
                       <div className=''>
                         <div className='flex items-center gap-5'>
                           <FaLocationDot className='text-blue text-3xl' />
-                          <p className='font-medium'>
-                            244 E 8th St Brooklyn New York 11218 USA
-                          </p>
+                          <p className='font-medium'>{allContact?.location}</p>
                         </div>
                         <div className='flex items-center gap-5 my-2'>
                           <IoMdCall className='text-blue text-xl' />
                           <p className='font-medium'>
-                            1917-327-2801
+                            {allContact?.phone.slice(0, 13)}
                             <br />
-                            1425-546-4513
+                            {allContact?.phone.slice(13, 30)}
                           </p>
                         </div>
                         <div className='flex items-center gap-5'>
                           <IoMdMail className='text-blue text-xl' />
-                          <p className='font-medium'>webtmusa@gmail.com</p>
+                          <p className='font-medium'>{allContact?.email}</p>
                         </div>
                       </div>
                     </div>

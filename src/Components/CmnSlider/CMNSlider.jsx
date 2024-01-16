@@ -45,9 +45,9 @@ export const CMNSlider = ({ sliderData }) => {
                 <div className='flex sm:flex-row flex-col md:gap-8 gap-2 sm:my-5 my-2 lg:justify-start justify-center items-center '>
                   {/* slider btn 1 */}
                   <Link
-                    to={"/contact"}
+                    to={`/blog/${data.id}`}
                     className='py-4 px-10 bg-blue rounded-full text-white  btnShadow hover:shadow-none w-fit text-sm'>
-                    Get Start
+                    Read More
                   </Link>
                 </div>
               </div>

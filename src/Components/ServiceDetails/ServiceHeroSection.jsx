@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const ServiceHeroSection = ({ Header }) => {
   return (
-    <div className='hero-content flex-col lg:flex-row-reverse md:py-10 py-5 gap-5'>
+    <div className='hero-content flex-col lg:flex-row-reverse md:py-10 py-5 gap-5 z-10'>
       {/* slider right & res-top */}
       <div className='lg:w-1/2 w-full'>
         <img src={`${Header[0]?.picture}`} className='lg:max-w-xl w-full' />
@@ -22,7 +22,7 @@ export const ServiceHeroSection = ({ Header }) => {
           {/* slider btn 1 */}
           <Link
             to='/contact'
-            className='py-4 px-10 bg-blue rounded-full text-white  btnShadow hover:shadow-none w-fit text-sm'>
+            className='py-4 px-10 bg-blue rounded-full text-white btnShadow hover:shadow-none w-fit text-sm'>
             Get Started
           </Link>
         </div>

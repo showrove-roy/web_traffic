@@ -13,8 +13,10 @@ export const BlogDetails = () => {
   // blog data load
   const { isLoading, data: singleB } = useQuery({
     queryKey: ["singleBlog"],
-    queryFn: () => axios.get(`/single-blogs/${id}`, {}),
+    queryFn: () => axios.get(`/single-blog/${id}`, {}),
   });
+
+  
 
   // store blog data
   let blog;

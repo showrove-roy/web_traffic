@@ -19,10 +19,11 @@ export const GetInTouch = () => {
 
   const { data } = useQuery({
     queryKey: ["contact"],
-    queryFn: () => axios.get("/all-contact", {}),
+    queryFn: () => axios.get("/single-contact/3", {}),
   });
 
   let allContact = data?.data?.data;
+
 
   return (
     <section className='maxW1280 py-10 md:mb-20 mb-10'>
@@ -44,7 +45,7 @@ export const GetInTouch = () => {
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium'>
                     <IoLocationOutline className='text-6xl text-blue hidden lg:block' />
-                    244 E 8th St Brooklyn New York 11218 USA
+                    {allContact?.location}
                   </p>
                 </div>
                 {/* Contact */}
@@ -54,11 +55,13 @@ export const GetInTouch = () => {
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium'>
                     <IoMdCall className='text-2xl text-blue hidden lg:block' />
-                    1917-327-2801 <br /> 1425-546-4513
+                    {allContact?.phone.slice(0,13)}
+                    <br />
+                    {allContact?.phone.slice(13,30)}
                   </p>
                   <p className='flex gap-5 items-center mt-3 lg:text-base text-sm text-black font-medium'>
                     <MdEmail className='text-2xl text-blue hidden lg:block' />
-                    webtmusa@gmail.com
+                    {allContact?.email}
                   </p>
                 </div>
                 {/* time */}
@@ -67,7 +70,7 @@ export const GetInTouch = () => {
                     Our Hours
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium text-center'>
-                    We are open SAT-THUR 08:30 –5:00 (GMT 6+)
+                  {allContact?.hours}
                   </p>
                 </div>
                 {/* Social */}
