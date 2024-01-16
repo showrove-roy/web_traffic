@@ -11,8 +11,19 @@ import {
   FaYoutube,
 } from "react-icons/fa";
 import { FaXTwitter } from "react-icons/fa6";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 export const GetInTouch = () => {
+
+
+  const { data } = useQuery({
+    queryKey: ["contact"],
+    queryFn: () => axios.get("/all-contact", {}),
+  });
+
+  let allContact = data?.data?.data;
+
   return (
     <section className='maxW1280 py-10 md:mb-20 mb-10'>
       <h2 className='lg:text-5xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-5 lg:mt-20'>
