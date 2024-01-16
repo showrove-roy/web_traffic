@@ -32,6 +32,7 @@ export const router = createBrowserRouter([
       },
       {
         path: "/service",
+        loader: () => axios.get('/get-header?searchTerm'),
         element: <Service></Service>,
       },
       {

@@ -1,6 +1,13 @@
-import Video from "../../assets/BolgsImages/video1 (2).mp4";
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 export const AboutUsHero = () => {
+  const { data } = useQuery({
+    queryKey: ["heroVideo"],
+    queryFn: () => axios.get("/single-video/2", {}),
+  });
+
+  let heroVideo = data?.data?.data;
   return (
     <div>
       <div className=''>
@@ -20,7 +27,7 @@ export const AboutUsHero = () => {
         <div className='w-full absolute md:-top-10 -top-5 left-1/2 -translate-x-1/2 px-5'>
           <video
             className='max-w-xl w-full mx-auto rounded-3xl aboutShadow '
-            src={Video}
+            src={heroVideo?.video}
             controls
             alt='All the devices'></video>
         </div>

@@ -8,7 +8,6 @@ import { Link } from "react-router-dom";
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
 
-import Laptop from "../../assets/Laptop.svg";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 
@@ -19,8 +18,6 @@ export const HeroSlider = () => {
   });
 
   let heroVideo = data?.data?.data;
-
- 
 
   return (
     <section className='heroBG maxW1280'>
@@ -38,17 +35,11 @@ export const HeroSlider = () => {
           <div className='hero-content flex-col lg:flex-row-reverse md:py-20 py-10 gap-5'>
             {/* slider right & res-top */}
             <div className='lg:w-1/2 w-full  	'>
-              <div className='  relative w-[100%] max-w-[1200px]'>
-                <img src={`${Laptop}`} className=' w-[100%]' />
-
-                <video
-                  className='  absolute  w-[68.7%] h-[81%] top-[14%] left-[13.5%] aboutShadow'
-                  src={heroVideo?.video}
-                  muted
-                  autoPlay
-                  loop
-                  alt='All the devices'></video>
-              </div>
+              <video
+                className='max-w-xl w-full mx-auto rounded-3xl aboutShadow '
+                src={heroVideo?.video}
+                controls
+                alt='All the devices'></video>
             </div>
 
             {/* slider left & res-bottom */}
