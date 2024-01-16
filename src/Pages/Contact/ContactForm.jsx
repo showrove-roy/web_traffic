@@ -1,15 +1,11 @@
 import { useForm } from "react-hook-form";
-import emailjs from 'emailjs-com';
+import emailjs from "emailjs-com";
 import toast from "react-hot-toast";
 
-
 export const ContactForm = () => {
-
-  const USER_ID = 'i2_fEpDFiS8yX-gUi';
-  const SERVICE_ID = 'service_g0xwnqh';
-  const TEMPLATE_ID = 'template_llblbo4';
-
-
+  const USER_ID = "i2_fEpDFiS8yX-gUi";
+  const SERVICE_ID = "service_g0xwnqh";
+  const TEMPLATE_ID = "template_llblbo4";
 
   const {
     register,
@@ -17,33 +13,27 @@ export const ContactForm = () => {
     reset,
     formState: { errors },
   } = useForm();
-  
+
   const handelGetData = async (data) => {
-    console.log(data,"check")
     const messageData = {
       from_name: data?.first_name,
-      to_name: 'Web Traffic',
+      to_name: "Web Traffic",
       message: data?.message,
       email: data?.email,
-      phoneNumber:data?.phone_num,
-      webSite:data?.url,
-      SEO:data?.SEO,
-  digital_Marketing:data?.digital_Marketing,
-
-  eCommerce_Website_Development:data?.eCommerce_Website_Development,
-  
-  graphics_Design:data?.graphics_Design
-  
-  
-    }
+      phoneNumber: data?.phone_num,
+      webSite: data?.url,
+      SEO: data?.SEO,
+      digital_Marketing: data?.digital_Marketing,
+      eCommerce_Website_Development: data?.eCommerce_Website_Development,
+      graphics_Design: data?.graphics_Design,
+    };
     try {
       // Send email using emailjs
       await emailjs.send(SERVICE_ID, TEMPLATE_ID, messageData, USER_ID);
-      toast.success('Email sent successfully!')
-      reset()
+      toast.success("Email sent successfully!");
+      reset();
     } catch (error) {
-      console.error('Error sending email:', error);
-      
+      console.error("Error sending email:", error);
     }
   };
   return (
