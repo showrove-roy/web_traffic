@@ -9,12 +9,17 @@ import { Link } from "react-router-dom";
 import { Autoplay, Pagination } from "swiper/modules";
 
 import Laptop from "../../assets/Laptop.svg";
-
-
-import Video from "../../assets/BolgsImages/video1 (2).mp4";
-
+import { useQuery } from "@tanstack/react-query";
+import axios from "axios";
 
 export const HeroSlider = () => {
+  const { data } = useQuery({
+    queryKey: ["heroVideo"],
+    queryFn: () => axios.get("/single-video/2", {}),
+  });
+
+  let heroVideo = data?.data?.data;
+
   return (
     <section className='heroBG maxW1280'>
       <Swiper
@@ -35,9 +40,9 @@ export const HeroSlider = () => {
                 <img src={`${Laptop}`} className=' w-[100%]' />
 
                 <video
-                  className='  absolute  w-[68.7%] h-[85.3%] top-[13.1%] left-[13.5%] aboutShadow'
-                  src={Video}
-             muted
+                  className='  absolute  w-[68.7%] h-[81%] top-[14%] left-[13.5%] aboutShadow'
+                  src={heroVideo?.video}
+                  muted
                   autoPlay
                   loop
                   alt='All the devices'></video>
@@ -71,8 +76,6 @@ export const HeroSlider = () => {
             </div>
           </div>
         </SwiperSlide>
-       
-       
       </Swiper>
     </section>
   );
