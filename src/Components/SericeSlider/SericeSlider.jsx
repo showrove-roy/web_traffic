@@ -22,6 +22,7 @@ export const SericeSlider = ({ banner }) => {
         className='mySwiper'>
         {/*  slid map */}
         {banner?.map((data) => (
+         
           <SwiperSlide key={data.id}>
             <div className='hero-content flex-col lg:flex-row-reverse md:py-10 py-5 gap-5'>
               {/* slider right & res-top */}
@@ -45,9 +46,9 @@ export const SericeSlider = ({ banner }) => {
                 <div className='flex sm:flex-row flex-col md:gap-8 gap-2 sm:my-5 my-2 lg:justify-start justify-center items-center '>
                   {/* slider btn 1 */}
                   <Link
-                    to='/contact'
+                    to={`/service/${data.catagoryId}`}
                     className='py-4 px-10 bg-blue rounded-full text-white  btnShadow hover:shadow-none w-fit text-sm'>
-                    Get Start
+                    See More
                   </Link>
                 </div>
               </div>
