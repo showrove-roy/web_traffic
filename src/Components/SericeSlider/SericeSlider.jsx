@@ -7,11 +7,9 @@ import "swiper/css/pagination";
 
 // import required modules
 import { Autoplay, Pagination } from "swiper/modules";
-
 import { Link } from "react-router-dom";
-import { useState } from "react";
+
 export const SericeSlider = ({ banner }) => {
-  const [desCounter, setDesCounter] = useState(250);
   return (
     <section className='maxW1280 relative md:mb-24 mb-10'>
       <Swiper
@@ -40,18 +38,8 @@ export const SericeSlider = ({ banner }) => {
                     ?.replace(/<[^>]*>?/gm, "")
                     ?.split(" ")
                     ?.join(" ")
-                    ?.slice(0, desCounter)}
-                  {data?.descripton?.length > desCounter && (
-                    <span className=''>
-                      ...{" "}
-                      <span
-                        className='font-medium cursor-pointer hover:text-blue'
-                        onClick={() => setDesCounter(data?.descripton?.length)}>
-                        {" "}
-                        See More
-                      </span>
-                    </span>
-                  )}
+                    ?.slice(0, 250)}
+                  {data.descripton?.length >= 250 && "..."}
                 </p>
                 {/* slider CTA button */}
                 <div className='flex sm:flex-row flex-col md:gap-8 gap-2 sm:my-5 my-2 lg:justify-start justify-center items-center '>

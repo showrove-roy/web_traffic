@@ -22,6 +22,7 @@ import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import { FeaturedBlogCard } from "../FeaturedBlogCard/FeaturedBlogCard";
 
 export const ServiceDetails = () => {
+  
   const { id } = useParams();
   const serviceData = useLoaderData();
 
@@ -47,7 +48,7 @@ export const ServiceDetails = () => {
       <ScrollToTop/>
       {/* Hero section */}
       <div className='relative'>
-        <ServiceHeroSection Header={services.Header} />
+        <ServiceHeroSection Header={services?.Header} />
         <div className='CMNSliderBG h-32 w-full absolute left-0 bottom-0 -z-10'></div>
       </div>
 
