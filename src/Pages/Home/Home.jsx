@@ -60,34 +60,117 @@ export const Home = () => {
                     tabIndex={0}
                     className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
                     <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
-                      For Example: This is a random Demo question ?
+                   
+                    How will you tailor your services to fit our business needs?
+
                     </div>
                     <div className='collapse-content faqBG'>
                       <p className='md:text-base text-sm text-black pt-2'>
-                        Here is the brief demo answer to the above eample random
-                        demo question.Here is the brief demo answer to the above
-                        eample random demo question .Here is the brief demo
-                        answer to the above eample random demo question.. Here
-                        is the brief demo answer to the above eample random demo
-                        question.
+                      Each business is unique, and a good digital marketing agency should customize its strategies and services to align with the specific goals, target audience, and budget of each client.
                       </p>
                     </div>
                   </div>
-                  {/* Faq 2*/}
+                  {/* Faq 3*/}
                   <div
                     tabIndex={0}
                     className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
                     <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
-                      For Example: This is a random Demo question ?
+                    
+                    How do you measure the success of digital marketing campaigns?
+
+
+
                     </div>
                     <div className='collapse-content faqBG'>
                       <p className='md:text-base text-sm text-black pt-2'>
-                        Here is the brief demo answer to the above eample random
-                        demo question.Here is the brief demo answer to the above
-                        eample random demo question .Here is the brief demo
-                        answer to the above eample random demo question.. Here
-                        is the brief demo answer to the above eample random demo
-                        question.
+                      Success metrics vary depending on the goals of the campaign but may include metrics like website traffic, conversion rates, click-through rates, engagement metrics (likes, shares, comments), return on investment , and customer lifetime value .
+                      </p>
+                    </div>
+                  </div>
+
+               
+                  <div
+                    tabIndex={0}
+                    className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
+                    <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
+                    
+                    How long will it take to see results from digital marketing efforts?
+
+
+
+
+                    </div>
+                    <div className='collapse-content faqBG'>
+                      <p className='md:text-base text-sm text-black pt-2'>
+                      The timeline for seeing results can vary depending on factors such as the competitiveness of the industry, the chosen marketing channels, the effectiveness of the strategies employed, and the (clients )budget. Generally, some results may be visible within a few weeks to months, but significant results may take several months to a year or more.
+
+                      </p>
+                    </div>
+                  </div>
+
+
+                  <div
+                    tabIndex={0}
+                    className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
+                    <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
+                    
+                    What is your approach to search engine optimization (SEO)?
+
+
+
+
+
+                    </div>
+                    <div className='collapse-content faqBG'>
+                      <p className='md:text-base text-sm text-black pt-2'>
+                      SEO is a crucial aspect of digital marketing. The agency should be able to explain its strategies for optimizing website visibility in search engine results pages (SERPs), including keyword research, on-page optimization, link building, and technical SEO.
+
+
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    tabIndex={0}
+                    className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
+                    <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
+                    
+                    What is your pricing structure?
+
+
+
+
+
+
+                    </div>
+                    <div className='collapse-content faqBG'>
+                      <p className='md:text-base text-sm text-black pt-2'>
+                      Pricing can vary based on the scope of services, the complexity of the project, and the level of customization required. The agency should be transparent about its pricing structure and any additional fees or expenses clients may incur.
+
+
+
+                      </p>
+                    </div>
+                  </div>
+                  <div
+                    tabIndex={0}
+                    className='collapse collapse-arrow rounded-md md:gap-3 gap-1 md:mb-5 mb-3'>
+                    <div className='collapse-title lg:text-xl text-base font-medium text-black faqBG after:text-[rgba(0,0,0,0.5)] '>
+                    What ongoing support and maintenance services do you offer?
+
+
+
+
+
+
+
+                    </div>
+                    <div className='collapse-content faqBG'>
+                      <p className='md:text-base text-sm text-black pt-2'>
+                      After the initial project is complete, clients may need ongoing support, maintenance, and updates for their digital solutions. They may ask about the agency s support packages, service-level agreements (SLAs), and response times for addressing issues
+
+
+
+
                       </p>
                     </div>
                   </div>

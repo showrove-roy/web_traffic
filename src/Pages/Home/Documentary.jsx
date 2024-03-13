@@ -7,7 +7,7 @@ export const Documentary = () => {
   const [desCounter, setDesCounter] = useState(150);
   const { isLoading, data: why } = useQuery({
     queryKey: ["whyWeb"],
-    queryFn: () => axios.get("/single-web/2", {}),
+    queryFn: () => axios.get("/single-web/1", {}),
   });
 
   let whyWeb = why?.data?.data;

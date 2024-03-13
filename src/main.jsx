@@ -7,7 +7,7 @@ import { FloatingWhatsApp } from "react-floating-whatsapp";
 import { Toaster } from "react-hot-toast";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import axios from "axios";
-axios.defaults.baseURL = "https://web-coral-five.vercel.app/api/v1";
+axios.defaults.baseURL = "https://web-tarffic2.vercel.app/api/v1";
 const queryClient = new QueryClient();
 
 

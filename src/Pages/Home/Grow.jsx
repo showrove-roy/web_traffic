@@ -7,7 +7,7 @@ const Grow = () => {
   const [show, setShow] = useState(150);
   const { isLoading: load, data: grow } = useQuery({
     queryKey: ["grow"],
-    queryFn: () => axios.get("/single-grow/2", {}),
+    queryFn: () => axios.get("/single-grow/1", {}),
   });
   let growWeb = grow?.data?.data;
   if (load) {

@@ -51,8 +51,8 @@ export const BlogSection = () => {
           }}
           modules={[Navigation]}
           className='mySwiper'>
-          {allBlogs.map((blog) => (
-            <SwiperSlide key={blog.id}>
+          {allBlogs?.map((blog) => (
+            <SwiperSlide key={blog?.id}>
               <BlogCard blog={blog} />
             </SwiperSlide>
           ))}

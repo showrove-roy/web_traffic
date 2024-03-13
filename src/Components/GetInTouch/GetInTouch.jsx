@@ -19,7 +19,7 @@ export const GetInTouch = () => {
 
   const { data } = useQuery({
     queryKey: ["contact"],
-    queryFn: () => axios.get("/single-contact/3", {}),
+    queryFn: () => axios.get("/single-contact/1", {}),
   });
 
   let allContact = data?.data?.data;
