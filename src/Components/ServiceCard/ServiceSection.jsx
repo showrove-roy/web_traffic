@@ -13,14 +13,14 @@ export const ServiceSection = () => {
     return <Loading />;
   }
 
-  let services = data.data.data;
+  let services = data?.data?.data;
 
 
   return (
-    <div className='w-full maxW1280'>
-      <div className='grid lg:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-10 justify-items-center w-full'>
-        {services.map((services) => (
-          <ServiceCard key={services.id} services={services} />
+    <div className='w-auto rounded-full outline-2 outline-blue-500/50'>
+      <div className='grid lg:grid-cols-6 sm:grid-cols-2 grid-cols-2 justify-items-center align-center gap-4 outline-2 outline-blue-500/50'>
+        {services?.map((services) => (
+          <ServiceCard key={services?.id} services={services} />
         ))}
       </div>
     </div>
