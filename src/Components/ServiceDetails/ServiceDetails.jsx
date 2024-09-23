@@ -62,7 +62,7 @@ export const ServiceDetails = () => {
       </div>
 
       {/* service description card */}
-      <div className='lg:my-20 my-10 grid lg:grid-cols-3 md:grid-cols-2 lg:gap-20 gap-10 px-3 2xl:px-0'>
+      <div className='grid lg:grid-cols-6 sm:grid-cols-2 grid-cols-2 justify-items-center align-center gap-4 outline-2 outline-blue-500/50'>
         {services?.SubCatagory?.map((serviceData) => (
           <ServiceDetailsCard
             key={serviceData.id}
