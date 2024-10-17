@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 export const BlueButton = ({ btnLink, btnText }) => {
   return (
     <Link
-      to={`/${btnLink}`}
-      className='bg-blue text-white text-center py-4 px-12 rounded-full btnShadow hover:shadow-none'>
+      to={`/${btnLink}`}>
       {btnText}
     </Link>
   );

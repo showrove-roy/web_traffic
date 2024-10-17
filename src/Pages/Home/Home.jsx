@@ -8,8 +8,22 @@ import { Documentary } from "./Documentary";
 import { FormulaSection } from "./FormulaSection";
 import { HeroSlider } from "./HeroSlider";
 import ScrollToTop from "../../Components/ScrollToTop/ScrollToTop";
+import Plan from "../Plan/Plan";
+import { useEffect, useState } from "react";
+import WebPlan from "../Plan/WebPlan";
+import VideoEditing from "../Plan/VideoEditing";
+import DigitalMarketing from "../Plan/DigitalMarketing";
+import Ux from "../Plan/Ux";
+import Mobile from "../Plan/Mobile";
+import Onboarding from "./Onboarding";
 
 export const Home = () => {
+  const [currentStep, setCurrentStep] = useState(1);
+  useEffect(() => {
+    
+      document.documentElement.setAttribute("data-theme","dark");
+   
+  }, []);
   return (
     <>
       {/* Hero section */}
@@ -27,6 +41,29 @@ export const Home = () => {
 
           <ServiceSection />
         </section>
+{/* plan section */}
+
+
+<section className="mx-auto">
+<h2></h2>
+<h2 className='lg:text-6xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-24 mb-16'>
+Pick The <span className='text-blue'>plan</span> That Fits Your Needs And 
+          </h2>
+
+
+          <div className="mt-5 text-center ">
+           <h1 className="lg:text-6xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-24 mb-16"> Budget.</h1>
+          </div>
+<Onboarding setCurrentStep={setCurrentStep} />
+{currentStep === 1 &&<Plan></Plan> }
+{currentStep === 2 &&<WebPlan></WebPlan> }
+{currentStep === 3 &&<VideoEditing></VideoEditing> }
+{currentStep === 4 &&<DigitalMarketing></DigitalMarketing> }
+{currentStep === 5 &&<Ux></Ux> }
+{currentStep === 6 && <Mobile></Mobile> }
+</section>
+
+
 
         {/* FormulaSection */}
         <FormulaSection />

@@ -22,7 +22,7 @@ export const BlogSection = () => {
     return <Loading />;
   }
 
-  let allBlogs = data.data.data;
+  let allBlogs = data?.data?.data;
 
   return (
     <section>
