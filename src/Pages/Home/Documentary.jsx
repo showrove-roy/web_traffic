@@ -33,13 +33,13 @@ export const Documentary = () => {
                 Why <span className='text-blue'>Web Traffic Magnet</span>
               </h3>
               <p className='md:text-xl text-sm md:mt-6 mt-2 text-black-10 text-justify md:text-left max-w-lg md:max-w-none mx-auto flex'>
-                {whyWeb.titel?.slice(0, desCounter)}
+                {whyWeb?.titel?.slice(0, desCounter)}
               </p>{" "}
-              {whyWeb.titel?.length > desCounter && (
+              {whyWeb?.titel?.length > desCounter && (
                 <span className=''>
                   <span
                     className='font-medium cursor-pointer hover:text-blue block max-w-lg md:max-w-none mx-auto md:text-lg text-sm'
-                    onClick={() => setDesCounter(whyWeb.titel?.length)}>
+                    onClick={() => setDesCounter(whyWeb?.titel?.length)}>
                     {" "}
                     See More
                   </span>

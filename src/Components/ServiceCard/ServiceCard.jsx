@@ -9,7 +9,7 @@ export const ServiceCard = ({ services }) => {
   const { id, picture, name, descripton } = services;
   return (
     
-    <div className="w-auto  transition-opacity duration-300 ease-in-out  overflow-hidden group ">
+    <div className="w-auto  transition-opacity duration-300 ease-in-out  overflow-hidden  group hover:scale-105  ">
 
   <div className=" rounded-lg relative mouse ">
     <img src={picture} alt="Hanging Planters" className="w-[200px] h-[200px] rounded-lg"/>
@@ -18,9 +18,7 @@ export const ServiceCard = ({ services }) => {
 
    </div>
   </div>
-  {/* <Link path={} className="p-4 text-center text-black group-hover:text-blue font-normal">
-  
- </Link> */}
+ 
  <div className="p-4 text-center text-black group-hover:text-blue font-normal">
  <BlueButton  btnText={name} btnLink={`service/${id}`} />
  </div>

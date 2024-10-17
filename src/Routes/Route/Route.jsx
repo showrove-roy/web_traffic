@@ -10,6 +10,8 @@ import { ServiceDetails } from "../../Components/ServiceDetails/ServiceDetails";
 import { BlogDetails } from "../../Components/BlogDetails/BlogDetails";
 import axios from "axios";
 import { FeaturedBlogDetails } from "../../Components/FeaturedBlogDetails/FeaturedBlogDetails";
+import Demo from "../../Components/Demo/Demo";
+import Plan from "../../Pages/Plan/Plan";
 
 export const router = createBrowserRouter([
   {
@@ -54,6 +56,15 @@ export const router = createBrowserRouter([
         loader: ({ params }) => axios.get(`/single-blogs/${params.id}`),
         element: <FeaturedBlogDetails></FeaturedBlogDetails>,
       },
+
+      {
+        path:"/demo",
+        element:<Demo></Demo>
+      },
+      {
+        path:"/plan",
+        element:<Plan></Plan>
+      }
     ],
   },
 ]);

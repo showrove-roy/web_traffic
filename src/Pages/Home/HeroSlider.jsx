@@ -14,7 +14,7 @@ import axios from "axios";
 export const HeroSlider = () => {
   const { data } = useQuery({
     queryKey: ["heroVideo"],
-    queryFn: () => axios.get("/single-video/2", {}),
+    queryFn: () => axios.get("/single-video/1", {}),
   });
 
   let heroVideo = data?.data?.data;

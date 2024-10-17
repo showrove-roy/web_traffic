@@ -22,9 +22,9 @@ export const GetInTouch = () => {
     queryFn: () => axios.get("/single-contact/1", {}),
   });
 
-  let allContact = data?.data?.data;
+const allContact = data?.data?.data;
 
-
+console.log(allContact)
   return (
     <section className='maxW1280 py-10 md:mb-20 mb-10'>
       <h2 className='lg:text-5xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-5 lg:mt-20'>
