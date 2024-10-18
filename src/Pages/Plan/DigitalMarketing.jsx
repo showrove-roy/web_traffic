@@ -4,7 +4,7 @@ import { IoCheckmark } from "react-icons/io5";
 const DigitalMarketing = () => {
     return (
         <div className="mx-auto my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-        <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+        <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
           <h3 className="text-center text-3xl font-bold"> Startup Plan Package
           </h3>
           <h1 className="text-5xl text-center font-bold text-[#1e1e1e] my-5">
@@ -188,7 +188,7 @@ const DigitalMarketing = () => {
          
           </ul>
           <div className="flex items-center justify-around">
-            <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
+            <button className="px-8 py-3 rounded-md border-2 border-blue hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
               Chat Now
             </button>
             <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
@@ -201,7 +201,7 @@ const DigitalMarketing = () => {
         </div>
   
         
-        <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+        <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
           <h3 className="text-center text-3xl font-bold">Scaling Plan Package
 
 
@@ -369,7 +369,7 @@ const DigitalMarketing = () => {
             
           </ul>
           <div className="flex items-center justify-around">
-            <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
+            <button className="px-8 py-3 rounded-md border  border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
               Chat Now
             </button>
             <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
@@ -382,7 +382,7 @@ const DigitalMarketing = () => {
         </div>
 
 
-        <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+        <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
           <h3 className="text-center text-3xl font-bold">Venture Plan Package
 
           </h3>
