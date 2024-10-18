@@ -44,7 +44,7 @@ export const HeroSlider = () => {
 
             {/* slider left & res-bottom */}
             <div className='lg:w-1/2 w-full '>
-              <h1 className='md:text-5xl text-2xl font-bold text-black-10 lg:text-left text-center'>
+              <h1 className='md:text-5xl text-2xl font-bold text-[#000000] lg:text-left text-center'>
                 Unlock Your Online Potential with Web Traffic Magnet
               </h1>
               <p className='py-2 md:py-5 text-black-10 lg:text-left text-center md:text-base text-xs'>

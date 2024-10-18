@@ -24,9 +24,9 @@ export const GetInTouch = () => {
 
 const allContact = data?.data?.data;
 
-console.log(allContact)
+
   return (
-    <section className='maxW1280 py-10 md:mb-20 mb-10'>
+    <section className='maxW1280 py-10 md:mb-20 mb-10 '>
       <h2 className='lg:text-5xl md:text-4xl text-3xl font-semibold text-black-10 text-center mt-5 lg:mt-20'>
         Get In <span className='text-blue'>Touch </span>
       </h2>
@@ -55,9 +55,9 @@ console.log(allContact)
                   </h5>
                   <p className='flex gap-5 items-center mt-3 md:text-lg text-xs text-black font-medium'>
                     <IoMdCall className='text-2xl text-blue hidden lg:block' />
-                    {allContact?.phone.slice(0,13)}
+                    {allContact?.phone?.slice(0,13)}
                     <br />
-                    {allContact?.phone.slice(13,30)}
+                    {allContact?.phone?.slice(13,30)}
                   </p>
                   <p className='flex gap-5 items-center mt-3 lg:text-base text-sm text-black font-medium'>
                     <MdEmail className='text-2xl text-blue hidden lg:block' />

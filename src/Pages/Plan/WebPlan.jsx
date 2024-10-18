@@ -4,7 +4,7 @@ import { IoCheckmark } from "react-icons/io5";
 function WebPlan() {
   return (
     <div className="mx-auto my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+      <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
         <h3 className="text-center text-3xl font-bold">Startup Website</h3>
         <h1 className="text-5xl text-center font-bold text-[#1e1e1e] my-5">
           $249.00 <span className="text-3xl text-stroke stroke-1">$470.00</span>
@@ -105,7 +105,7 @@ function WebPlan() {
       </div>
 
       
-      <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+      <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
         <h3 className="text-center text-3xl font-bold">Professional Website</h3>
         <h1 className="text-5xl text-center font-bold text-[#1e1e1e] my-5">
         $699.00  <span className="text-3xl text-stroke stroke-1">$1299.00 </span>
@@ -247,7 +247,7 @@ function WebPlan() {
           Suitable for newly formed organizations or small incubated startups
         </p>
       </div>
-      <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+      <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
         <h3 className="text-center text-3xl font-bold">Elite Website
         </h3>
         <h1 className="text-5xl text-center font-bold text-[#1e1e1e] my-5">

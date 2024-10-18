@@ -4,7 +4,7 @@ import { IoCheckmark } from "react-icons/io5";
 function Plan() {
   return (
     <div className="mx-auto my-10 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-10">
-      <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+      <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
         <h3 className="text-center text-3xl font-bold">Logo Special</h3>
         <h1 className="text-5xl text-center font-bold text-[#1e1e1e] my-5">
           $99.00 <span className="text-3xl text-stroke stroke-1">$25.00</span>
@@ -73,7 +73,7 @@ function Plan() {
       </div>
 
 
-      <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+      <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
         <h3 className="text-center text-3xl font-bold">Logo Plus
         </h3>
         <h1 className="text-5xl text-center font-bold text-[#1e1e1e] my-5">
@@ -167,7 +167,7 @@ function Plan() {
           Suitable for newly formed organizations or small incubated startups
         </p>
       </div>
-      <div className="w-full border border-black p-5 rounded-lg hover:scale-110 transition-transform duration-300">
+      <div className="w-full border-2 border-blue p-5 rounded-lg hover:scale-110 transition-transform duration-300">
         <h3 className="text-center text-3xl font-bold">Logo Platinum
         </h3>
         <h1 className="text-5xl text-center font-bold text-[#1e1e1e] my-5">
