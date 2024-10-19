@@ -14,6 +14,12 @@ import Demo from "../../Components/Demo/Demo";
 import Plan from "../../Pages/Plan/Plan";
 
 export const router = createBrowserRouter([
+
+  {
+    path:"/demo/:id",
+    loader: ({ params }) => axios.get(`/single-Subcategory/${params.id}`),
+    element:<Demo></Demo>
+  },
   {
     path: "/",
     element: <Main></Main>,
@@ -58,13 +64,10 @@ export const router = createBrowserRouter([
       },
 
       {
-        path:"/demo",
-        element:<Demo></Demo>
-      },
-      {
         path:"/plan",
         element:<Plan></Plan>
-      }
+      },
     ],
+   
   },
 ]);

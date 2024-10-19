@@ -1,5 +1,6 @@
 import { FaAngleRight } from "react-icons/fa6";
 import { IoCheckmark } from "react-icons/io5";
+import { Link } from "react-router-dom";
 
 function Plan() {
   return (
@@ -60,12 +61,12 @@ function Plan() {
        
         </ul>
         <div className="flex items-center justify-around">
-          <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
+          <Link to='/contact'className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
             Chat Now
-          </button>
-          <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
+          </Link>
+          <Link to='/contact'className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
             Order Now
-          </button>
+          </Link>
         </div>
         <p className="mt-4 text-center">
           Suitable for newly formed organizations or small incubated startups
@@ -156,12 +157,12 @@ function Plan() {
          
         </ul>
         <div className="flex items-center justify-around">
-          <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
+          <Link to='/contact'className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
             Chat Now
-          </button>
-          <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
+          </Link>
+          <Link to='/contact'className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
             Order Now
-          </button>
+          </Link>
         </div>
         <p className="mt-4 text-center">
           Suitable for newly formed organizations or small incubated startups
@@ -249,12 +250,12 @@ function Plan() {
           </li>
         </ul>
         <div className="flex items-center justify-around">
-          <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
+          <Link to='/contact'className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
             Chat Now
-          </button>
-          <button className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
+          </Link>
+          <Link to='/contact'className="px-8 py-3 rounded-md border border-black hover:bg-[#1e1e1e] hover:text-white transition-colors duration-300 cursor-pointer">
             Order Now
-          </button>
+          </Link>
         </div>
         <p className="mt-4 text-center">
           Suitable for newly formed organizations or small incubated startups
