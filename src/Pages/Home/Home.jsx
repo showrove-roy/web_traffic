@@ -16,6 +16,7 @@ import DigitalMarketing from "../Plan/DigitalMarketing";
 import Ux from "../Plan/Ux";
 import Mobile from "../Plan/Mobile";
 import Onboarding from "./Onboarding";
+import CustomCursor from "../CustomCursor";
 
 export const Home = () => {
   const [currentStep, setCurrentStep] = useState(1);
@@ -31,6 +32,7 @@ export const Home = () => {
       <HeroSlider />
       <section className='bg-[#F9FCFD] maxW1280 py-10'>
         {/* Documentary section */}
+        <CustomCursor />
         <Documentary />
 
         {/* service section */}
