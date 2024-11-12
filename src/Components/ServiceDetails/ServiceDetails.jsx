@@ -20,6 +20,7 @@ import axios from "axios";
 import { useQuery } from "@tanstack/react-query";
 import ScrollToTop from "../ScrollToTop/ScrollToTop";
 import { FeaturedBlogCard } from "../FeaturedBlogCard/FeaturedBlogCard";
+import Marketing from "../../Pages/Marketing";
 
 export const ServiceDetails = () => {
   
@@ -53,13 +54,15 @@ export const ServiceDetails = () => {
       </div>
 
       {/* title  */}
-      <div className=''>
-        <h2 className='lg:text-5xl md:text-4xl text-xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
-          Our <br className='md:hidden ' />
-          <span className='text-blue'> {services?.name} </span>
-          <br className='md:hidden ' /> Services
-        </h2>
-      </div>
+      { id !== "4" && (
+  <div>
+    <h2 className="lg:text-5xl md:text-4xl text-xl font-semibold text-black-10 text-center lg:mt-10 mt-7">
+      Our <br className="md:hidden" />
+      <span className="text-blue">{services?.name}</span>
+      <br className="md:hidden" /> Services
+    </h2>
+  </div>
+)}
 
       {/* service description card */}
       <div className='grid lg:grid-cols-6 sm:grid-cols-2 grid-cols-2 justify-items-center align-center gap-4 outline-2 outline-blue-500/50'>
@@ -69,6 +72,13 @@ export const ServiceDetails = () => {
             serviceData={serviceData}></ServiceDetailsCard>
         ))}
       </div>
+
+{/* extre sectino  */}
+
+{id=== "4" &&<Marketing></Marketing> }
+
+
+
 
       {/* FAQ Section */}
       <FaqSection faqs={services?.CatagoryFaq} />
@@ -86,7 +96,7 @@ export const ServiceDetails = () => {
       <div className='mt-32'>
         <h2 className='lg:text-5xl md:text-4xl text-xl font-semibold text-black-10 text-center lg:mt-10 mt-7'>
           Featured Blogs on
-          <span className='text-blue'> Digital Marketing </span>
+          <span className='text-blue'>{services?.name} </span>
         </h2>
       </div>
 
