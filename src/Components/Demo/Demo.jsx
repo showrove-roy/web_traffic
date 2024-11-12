@@ -74,44 +74,63 @@ const Demo = () => {
 
 
     return (
-        <div
-        name="portfolio"
-        className="bg-gradient-to-l from-[rgb(7,7,7)] to-white w-full text-white "
-      >
-        <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
-          <div className="pb-8">
+      <div
+   
+      className="bg-gradient-to-l from-[rgb(7,7,7)] to-white w-full text-white"
+    >
+      <div className="max-w-screen-lg p-4 mx-auto flex flex-col justify-center w-full h-full">
+        <div className="pb-8">
+          <Link to={'/'}>
             <p className="text-4xl font-bold inline border-b-4 border-gray-500">
               Portfolio
             </p>
-            <p className="py-6">Check out some of our work right here</p>
-          </div>
-  
-          <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-            { data?.data?.data?.Service.map(({ id, image,link}) => (
-              <div key={id} className=" rounded-lg ">
-               <div className="h-[300px] overflow-hidden w-full">
-               <a href={link} target="_blank" rel="noopener noreferrer">
-  <img
-    src={image}
-    alt=""
-    className="rounded-md hover:scale-200 h-full w-full object-cover object-top hover:object-bottom duration-[5000ms]"
-  />
-</a>
-               
-               </div>
-                <div className="flex items-center justify-center">
-                <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-200">
-    {/* <a href={url} target="_blank" rel="noopener noreferrer">
-      Demo
-    </a> */}
-  </button>
-                  
+          </Link>
+          <p className="py-6">Check out some of our work right here</p>
+        </div>
+    
+        <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
+          {data?.data?.data?.Service.map(({ id, image, link }) => {
+            const isValidLink = link.startsWith('http://') || link.startsWith('https://');
+            const mediaLink = isValidLink ? link : '#';
+    
+            return (
+              <div key={id} className="rounded-lg">
+                <div className="h-[300px] overflow-hidden w-full">
+                  <a
+                    href={mediaLink}
+                    target={isValidLink ? "_blank" : "_self"}
+                    rel={isValidLink ? "noopener noreferrer" : undefined}
+                    onClick={(e) => !isValidLink && e.preventDefault()}
+                    className={isValidLink ? "" : "cursor-not-allowed "}
+                  >
+                    {link.endsWith('.mp4') || link.endsWith('.webm') ? (
+                      <video
+                        src={isValidLink ? link : undefined}
+                        controls
+                        className="rounded-md hover:scale-200 h-full w-full object-cover object-top hover:object-bottom duration-[5000ms]"
+                      />
+                    ) : (
+                      <img
+                        src={image}
+                        alt=""
+                        className="rounded-md hover:scale-200 h-full w-full object-cover object-top hover:object-bottom duration-[5000ms]"
+                      />
+                    )}
+                  </a>
                 </div>
               </div>
-            ))}
-          </div>
+            );
+          })}
+        </div>
+    
+        <div className="flex items-center justify-center">
+          <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-200">
+            {/* Uncomment and set URL if needed */}
+            {/* <a href={url} target="_blank" rel="noopener noreferrer">Demo</a> */}
+          </button>
         </div>
       </div>
+    </div>
     );
 };
 
