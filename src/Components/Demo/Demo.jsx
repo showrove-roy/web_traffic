@@ -90,15 +90,13 @@ const Demo = () => {
             { data?.data?.data?.Service.map(({ id, image,link}) => (
               <div key={id} className=" rounded-lg ">
                <div className="h-[300px] overflow-hidden w-full">
-          <Link to={link}>
-          <img
-                  src={image}
-                  alt=""
-                  className="rounded-md  hover:scale-200 h-full w-full object-cover
-                object-top hover:object-bottom duration-[5000ms] "
-                />
-          
-          </Link>
+               <a href={link} target="_blank" rel="noopener noreferrer">
+  <img
+    src={image}
+    alt=""
+    className="rounded-md hover:scale-200 h-full w-full object-cover object-top hover:object-bottom duration-[5000ms]"
+  />
+</a>
                
                </div>
                 <div className="flex items-center justify-center">
