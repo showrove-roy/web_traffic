@@ -4,6 +4,7 @@ import { Loading } from '../Loading/Loading';
 import axios from 'axios';
 import { useQuery } from '@tanstack/react-query';
 import { useLoaderData, useParams } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 
 const Demo = () => {
@@ -86,15 +87,19 @@ const Demo = () => {
           </div>
   
           <div className="grid sm:grid-cols-2 md:grid-cols-3 gap-8 px-12 sm:px-0">
-            { data?.data?.data?.Service.map(({ id, image,}) => (
+            { data?.data?.data?.Service.map(({ id, image,link}) => (
               <div key={id} className=" rounded-lg ">
                <div className="h-[300px] overflow-hidden w-full">
-               <img
+          <Link to={link}>
+          <img
                   src={image}
                   alt=""
                   className="rounded-md  hover:scale-200 h-full w-full object-cover
                 object-top hover:object-bottom duration-[5000ms] "
                 />
+          
+          </Link>
+               
                </div>
                 <div className="flex items-center justify-center">
                 <button className="w-1/2 px-6 py-3 m-4 duration-200 hover:scale-200">
